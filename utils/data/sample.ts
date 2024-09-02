@@ -47,3 +47,21 @@ export const brandLogos = [
     "/brand/Logo-4.png",
     "/brand/Logo-5.png"
 ]
+
+export const socialMedia = [
+    {
+        title: "Tik Tok",
+        href: "https://www.tiktok.com/@bluesandsstemlabs",
+        icon: "/icons/social/tiktok.png"
+    },
+    {
+        title: "Instagram",
+        href: "https://www.instagram.com/bluesandsstemlabs",
+        icon: "/icons/social/instagram.png"
+    },
+    {
+        title: "X",
+        href: "https://www.x.com/bluesandsstemlabs",
+        icon: "/icons/social/x.png"
+    }
+]
