@@ -49,6 +49,7 @@ export default function NewsLetterForm() {
           <button
             type="submit"
             className="bg-blue-500 text-white px-4 py-2 rounded-r-md"
+            onChange={(e) => setEmail(e.target.value)}
           >
             Subscribe
           </button>
