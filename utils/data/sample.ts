@@ -38,3 +38,12 @@ export const topNav = [
         href: "/contact"
     }
 ]
+
+export const brandLogos = [
+    "/brand/Logo.png",
+    "/brand/Logo-1.png",
+    "/brand/Logo-2.png",
+    "/brand/Logo-3.png",
+    "/brand/Logo-4.png",
+    "/brand/Logo-5.png"
+]
