@@ -16,7 +16,7 @@ export default function Navbar() {
     const [isMobile, setIsMobile] = useState(false);
 
     return (
-        <nav className="w-full flex items-center justify-between py-4 px-10 relative">
+        <nav className="w-full flex items-center justify-between py-4 px-4 md:px-10 relative">
             <div>
                 <Image src="/logo/logo.png" alt="BlueSands STEM Labs" width={100} height={100} />
             </div>
