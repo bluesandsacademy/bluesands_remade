@@ -32,7 +32,7 @@ export default function AccessStats() {
   return (
     <div className="w-full mx-auto bg-white py-10">
       <div className="flex flex-col items-center justify-center gap-10">
-        <h3 className="text-5xl font-semibold text-center relative">
+        <h3 className="text-5xl font-semibold text-center relative md:block hidden">
           <Image
             src="/icons/little vr user 3.png"
             alt="science"
@@ -41,6 +41,18 @@ export default function AccessStats() {
             height={90}
           />
           Instant Access to 150+ Science <br /> Lab{" "}
+          <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Simulations &
+          Counting
+        </h3>
+        <h3 className="text-3xl font-semibold text-center relative md:hidden block">
+          <Image
+            src="/icons/little vr user 3.png"
+            alt="science"
+            className="absolute top-6 left-[11.3rem]"
+            width={50}
+            height={50}
+          />
+          Instant Access to 150+ Science Lab
           <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> Simulations &
           Counting
         </h3>
