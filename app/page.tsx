@@ -9,6 +9,7 @@ import AccessStats from "@/components/AccessStats";
 import BookFreeDemo from "@/components/BookFreeDemo";
 import ProvidingYourChild from "@/components/ProvidingYourChild";
 import Pricing from "@/components/Pricing";
+import MeetTheTeam from "@/components/MeetTheTeam";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <AccessStats />
       <WhyBlueSands />
       <Pricing />
+      <MeetTheTeam />
       <Footer />
     </main>
   );
