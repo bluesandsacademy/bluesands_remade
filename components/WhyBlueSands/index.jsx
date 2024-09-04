@@ -10,10 +10,10 @@ const answers = [
 
 export default function WhyBlueSands() {
   return (
-    <div className="w-full py-10 h-full bg-white mx-auto">
+    <div className="w-full py-10 h-full bg-white">
       <div className="container mx-auto flex flex-col md:flex-row justify-center gap-5">
         <div className="md:w-6/12 w-full">
-          <div className="md:w-[70%] w-full  mx-auto h-full p-3 relative bg-[#F5F8FE]">
+          <div className="md:w-[70%] w-full h-full p-3 relative bg-[#F5F8FE]">
             <Image
               src="/icons/star.png"
               alt="Star Icon"
