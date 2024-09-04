@@ -47,7 +47,7 @@ export default function BookFreeDemo() {
               Transforming STEM Education with cutting-edge virtual reality.
             </p>
             <p className="md:text-lg text-md md:text-left text-center">
-              Blue Sands STEM Lab's virtual labs empower secondary schools
+              Blue Sands STEM Lab&apos;s virtual labs empower secondary schools
               across Nigeria, including rural areas with no internet access.
               With a student-friendly interface, real-world lab resources, and
               intuitive teacher controls, these labs improve retention, boost
