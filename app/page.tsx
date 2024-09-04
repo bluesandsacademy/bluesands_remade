@@ -6,15 +6,22 @@ import Footer from "@/components/Footer";
 import NewsLetterForm from "@/components/NewsLetterForm";
 import WhyBlueSands from "@/components/WhyBlueSands";
 import AccessStats from "@/components/AccessStats";
+import BookFreeDemo from "@/components/BookFreeDemo";
+import ProvidingYourChild from "@/components/ProvidingYourChild";
+import Pricing from "@/components/Pricing";
+
 export default function Home() {
   return (
     <main className="w-full h-full bg-[#F5F8FE]">
       <Navbar />
       <LandingHero />
       <Brands />
+      <BookFreeDemo />
       <NewsLetterForm />
+      <ProvidingYourChild />
       <AccessStats />
       <WhyBlueSands />
+      <Pricing />
       <Footer />
     </main>
   );
