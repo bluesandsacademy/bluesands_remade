@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import LandingHero from "@/components/LandingHero";
 import Brands from "@/components/Brands";
@@ -18,12 +17,12 @@ export default function Home() {
       <LandingHero />
       <Brands />
       <BookFreeDemo />
-      <NewsLetterForm />
       <ProvidingYourChild />
       <AccessStats />
       <WhyBlueSands />
       <Pricing />
       <MeetTheTeam />
+      <NewsLetterForm />
       <Footer />
     </main>
   );
