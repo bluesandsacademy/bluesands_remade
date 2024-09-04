@@ -20,7 +20,8 @@ export default function Navbar() {
             <div>
                 <Image src="/logo/logo.png" alt="BlueSands STEM Labs" width={100} height={100} />
             </div>
-            <div className="md:hidden">
+            <div className="md:hidden flex items-center gap-x-5">
+                <button className="bg-blue-500 text-white px-6 py-3 rounded-md">Sign Up</button>
                 <GiHamburgerMenu className="text-3xl" onClick={() => setIsMobile(!isMobile)} />
             </div>
             <ul className="md:flex hidden items-center justify-between gap-x-3 ">
