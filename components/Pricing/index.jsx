@@ -45,7 +45,7 @@ export default function Pricing() {
   const [selectedPlan, setSelectedPlan] = useState(pricingData[1].userType[0]);
 
   return (
-    <div className="w-full h-full bg-white space-y-5 py-10 md:px-10 px-2">
+    <div className="w-full h-full bg-white space-y-5 py-10 md:px-16 px-2">
       <div className="container mx-auto flex flex-col items-start justify-center h-full">
         <h3 className="text-3xl font-bold">Our Pricing</h3>
         <p>Explore flexible pricing that fits your program budget.</p>
