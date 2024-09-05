@@ -9,6 +9,7 @@ import BookFreeDemo from "@/components/BookFreeDemo";
 import ProvidingYourChild from "@/components/ProvidingYourChild";
 import Pricing from "@/components/Pricing";
 import MeetTheTeam from "@/components/MeetTheTeam";
+import LabForSecondarySchools from "@/components/LabForSecondarySchools";
 
 export default function Home() {
   return (
@@ -17,6 +18,9 @@ export default function Home() {
       <LandingHero />
       <Brands />
       <BookFreeDemo />
+      {/* Lab for Secondary Schools */}
+      <LabForSecondarySchools />
+      {/* Lab for Secondary Schools */}
       <ProvidingYourChild />
       <AccessStats />
       <WhyBlueSands />
