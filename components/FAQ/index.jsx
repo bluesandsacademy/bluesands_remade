@@ -16,7 +16,7 @@ export default function FAQ() {
           {faqData[0].questions.map((question, index) => (
             <div
               key={index}
-              className="w-full flex-1 p-3 rounded-md border-[0.3px] border-gray-300 flex flex-col text-gray-700 items-center justify-center gap-y-3"
+              className="w-full flex-1 p-3 rounded-md border-[0.3px] border-gray-300 flex flex-col text-gray-700 items-start justify-center gap-y-3"
             >
               <h3
                 className={`text-xl flex items-center justify-between cursor-pointer w-full`}
