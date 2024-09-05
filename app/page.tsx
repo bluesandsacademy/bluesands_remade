@@ -10,6 +10,7 @@ import ProvidingYourChild from "@/components/ProvidingYourChild";
 import Pricing from "@/components/Pricing";
 import MeetTheTeam from "@/components/MeetTheTeam";
 import LabForSecondarySchools from "@/components/LabForSecondarySchools";
+import FAQ from "@/components/FAQ";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <Pricing />
       <MeetTheTeam />
       <NewsLetterForm />
+      <FAQ />
       <Footer />
     </main>
   );
