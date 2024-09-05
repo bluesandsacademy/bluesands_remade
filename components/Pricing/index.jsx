@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
+import Link from 'next/link'
 
 const pricingData = [
   {
@@ -90,7 +91,7 @@ export default function Pricing() {
                     : item.price}
                 </p>
               </div>
-              <div className="bg-white rounded-md w-full h-fit shadow-sm space-y-3">
+              <div className="bg-white rounded-md w-full h-fit shadow-sm flex flex-col justify-center items-center">
                 <h3 className="font-semibold text-lg text-center mt-2">
                   Available Features
                 </h3>
@@ -107,9 +108,9 @@ export default function Pricing() {
                     </li>
                   ))}
                 </ul>
-                <button className="bg-blue-500 text-white rounded-b-md px-2 py-3 w-full">
+                <Link href="/signup" className="bg-blue-500 text-white text-center rounded-b-md px-2 py-3 w-full">
                   Get Started
-                </button>
+                </Link>
               </div>
             </div>
           ))}
