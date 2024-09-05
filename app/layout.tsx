@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const metadata: Metadata = {
   title: "BlueSands STEM Labs",
@@ -14,6 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <ToastContainer closeOnClick={true} />
       <body>{children}</body>
     </html>
   );
