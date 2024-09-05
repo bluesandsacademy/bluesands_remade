@@ -11,7 +11,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
   return (
     <div className="w-full h-full bg-white md:px-20 px-4 py-10">
-      <div className="h-fit mx-auto flex md:flex-row flex-col items-start justify-between">
+      <div className="h-fit mx-auto flex md:flex-row flex-col gap-5 items-start justify-between">
         <div className="md:w-6/12 w-full h-full flex flex-col items-stretch gap-y-5 justify-between">
           {faqData[0].questions.map((question, index) => (
             <div
