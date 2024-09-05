@@ -2,13 +2,28 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import axios from "axios";
+import { toast } from "react-toastify";
+import { Puff } from "react-loader-spinner";
 
 export default function NewsLetterForm() {
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(e) {
+  async function handleSubscribe(e) {
+    setLoading(true);
     e.preventDefault();
-    console.log(email);
+    const endpoint = `https://email-delivery-api.onrender.com/newsletter`;
+    try {
+      await axios.post(endpoint, { emailAddress: email });
+      toast("Successfully Subscribed");
+      setEmail("");
+    } catch (error) {
+      console.error(error);
+      toast("Subscription Failed... Please Try Again Later");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -38,20 +53,23 @@ export default function NewsLetterForm() {
           Blue sands STEM Labs can enhance your STEM teaching experiences.
         </p>
         <form
-          onSubmit={handleSubmit}
+          onSubmit={handleSubscribe}
           className="flex items-center border border-gray-300 rounded-md w-full md:w-2/6"
         >
           <input
-            type="email"
+            type="emailAddress"
             placeholder="Enter your email"
-            className="px-4 w-full py-2 rounded-l-md"
+            className="px-4 h-12 w-full py-2 rounded-l-md"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <button
             type="submit"
-            className="bg-blue-500 text-white px-4 py-2 rounded-r-md"
+            className="bg-blue-500 h-12 text-white px-4 py-2 rounded-r-md"
             onChange={(e) => setEmail(e.target.value)}
           >
-            Subscribe
+            {loading ? "Loading..." : "Subscribe"}
           </button>
         </form>
       </div>
