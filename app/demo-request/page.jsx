@@ -61,7 +61,7 @@ export default function DemoRequest() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
-    const baseUrl = `http://localhost:4000/request-demo`;
+    const baseUrl = `http://email-delivery-api.onrender.com/request-demo`;
     setLoading(true);
 
     try {
