@@ -23,7 +23,7 @@ export default function ProvidingYourChild() {
           </p>
         </div>
         <div className="md:w-6/12 w-full">
-          <div className="md:w-[70%] w-full  mx-auto h-full p-3 relative bg-[#F5F8FE]">
+          <div className="md:w-[70%] w-full ml-auto h-full p-3 relative bg-[#F5F8FE]">
             <Image
               src="/stock/parent with child.png"
               alt="man sitting with laptop"
