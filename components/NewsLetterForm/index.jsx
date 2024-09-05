@@ -28,7 +28,7 @@ export default function NewsLetterForm() {
           height={50}
           className="absolute bottom-5 md:left-[10rem] left-5"
         />
-        <h3 className="text-4xl font-bold">Newsletter</h3>
+        <h3 className="text-5xl font-bold">Newsletter</h3>
         <p className="text-3xl font-bold">
           Stay Ahead with Blue Sands STEM Labs!
         </p>
