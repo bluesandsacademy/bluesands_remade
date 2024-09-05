@@ -453,3 +453,83 @@ export const countries = [
     "Zambia",
     "Zimbabwe",
 ];
+
+export const howYouHeardAboutUsList = [
+    "Facebook",
+    "Instagram",
+    "YouTube",
+    "Twitter",
+    "LinkedIn",
+    "Web Search",
+    "Email",
+    "Events",
+    "News/Article/Blogs",
+    "Referred by a University or Professor",
+    "Referred by a Friend or Family Member",
+];
+
+
+export const nigerianStates = [
+    "Abia",
+    "Adamawa",
+    "Akwa Ibom",
+    "Anambra",
+    "Bauchi",
+    "Bayelsa",
+    "Benue",
+    "Borno",
+    "Cross River",
+    "Delta",
+    "Ebonyi",
+    "Edo",
+    "Ekiti",
+    "Enugu",
+    "Gombe",
+    "Imo",
+    "Jigawa",
+    "Kaduna",
+    "Kano",
+    "Katsina",
+    "Kebbi",
+    "Kogi",
+    "Kwara",
+    "Lagos",
+    "Nasarawa",
+    "Niger",
+    "Ogun",
+    "Ondo",
+    "Osun",
+    "Oyo",
+    "Plateau",
+    "Rivers",
+    "Sokoto",
+    "Taraba",
+    "Yobe",
+    "Zamfara",
+    "FCT (Federal Capital Territory)",
+];
+
+export const workPosition = [
+    "Professor/Instructor",
+    "Head/Chair of Department",
+    "Dean/Director",
+    "Faculty Administrator",
+    "Education Curriculum Developer",
+    "Laboratory Instructor/ Cordinator",
+    "Online Instructor/ Coordinator",
+    "Others",
+];
+
+export const faculties = [
+    "Faculty of Medicine",
+    "Faculty of Pharmacy",
+    "Faculty of Engineering",
+    "Faculty of Science",
+    "Faculty of Agriculture",
+    "Faculty of Education",
+    "Faculty of Nursing",
+    "Faculty of Veterinary Medicine",
+    "Faculty of Physical Therapy",
+    "Others",
+];
+
