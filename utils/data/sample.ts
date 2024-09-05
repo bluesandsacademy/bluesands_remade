@@ -150,6 +150,28 @@ export const faqData = [
                 answer:
                     "No, all you need is a computer or tablet with an internet connection to access and use Blue Sands Virtual STEM Labs.",
             },
+            {
+                question:
+                    "What STEM subjects are covered in Blue Sands Virtual STEM Labs?",
+                answer:
+                    "Our platform covers a wide range of STEM subjects including biology, chemistry, physics, and engineering.",
+            },
+            {
+                question: "Are the virtual labs aligned with educational standards?",
+                answer:
+                    "Yes, our labs are designed to align with national and state education standards.",
+            },
+            {
+                question:
+                    "Can teachers use Blue Sands Virtual STEM Labs for classroom instruction?",
+                answer:
+                    "Absolutely! Teachers can incorporate our labs into their lesson plans to enhance student learning and engagement.",
+            },
+            {
+                question: "Is there a cost to use Blue Sands Virtual STEM Labs?",
+                answer:
+                    "There are both free and paid subscription options available to suit different needs.",
+            },
         ],
     },
     {
