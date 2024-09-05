@@ -17,9 +17,9 @@ export default function Navbar() {
 
     return (
         <nav className="w-full flex items-center justify-between py-4 px-4 md:px-10 relative">
-            <div>
+            <Link href="/">
                 <Image src="/logo/logo.png" alt="BlueSands STEM Labs" width={100} height={100} />
-            </div>
+            </Link>
             <div className="md:hidden flex items-center gap-x-5">
                 <button className="bg-blue-500 text-white px-6 py-3 rounded-md">Sign Up</button>
                 <GiHamburgerMenu className="text-3xl" onClick={() => setIsMobile(!isMobile)} />
@@ -47,7 +47,7 @@ export default function Navbar() {
                 ))}
             </ul>
             <div className="hidden md:block">
-                <button className="bg-blue-500 text-white px-6 py-3 rounded-md">Sign Up</button>
+                <Link href="/signup" className="bg-blue-500 text-white px-6 py-3 rounded-md">Sign Up</Link>
             </div>
             {isMobile && (
                 <AnimatePresence>
