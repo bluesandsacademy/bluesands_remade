@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function BookFreeDemo() {
   return (
@@ -54,9 +55,9 @@ export default function BookFreeDemo() {
               grades, and promote equitable learning outcomes nationwide.
             </p>
           </div>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-md capitalize">
+          <Link href="/demo-request" className="bg-blue-500 text-white px-4 py-2 rounded-md capitalize">
             Book a Free Demo
-          </button>
+          </Link>
         </div>
       </div>
     </div>
