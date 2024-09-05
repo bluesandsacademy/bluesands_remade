@@ -5,7 +5,7 @@ export default function BookFreeDemo() {
     <div className="w-full h-full bg-white">
       <div className="w-full h-full container flex flex-col md:flex-row mx-auto py-10 justify-between md:px-10 px-2">
         <div className="w-full h-full flex items-center justify-center gap-3">
-          <div className="w-fit h-full flex items-center justify-center bg-[#F5F8FE] p-3 rounded-md relative">
+          <div className="w-fit h-full mr-auto flex items-center justify-center bg-[#F5F8FE] p-3 rounded-md relative">
             <Image
               src="/icons/star.png"
               alt="Star Icon"
@@ -21,15 +21,15 @@ export default function BookFreeDemo() {
             />
           </div>
         </div>
-        <div className="md:w-[65%] w-full h-fit flex flex-col justify-between md:items-start items-center gap-5">
-          <div className="space-y-3">
+        <div className=" w-full h-fit flex flex-col justify-between md:items-start items-center gap-5">
+          <div className="space-y-5">
             <h3 className="md:text-5xl text-3xl font-bold relative md:text-left text-center">
               <Image
                 src="/icons/little child vr user.png"
                 alt="Little Child VR User"
                 width={100}
                 height={100}
-                className="absolute -top-2 -left-7 md:block hidden"
+                className="absolute -top-2 -left-9 md:block hidden"
               />
               <span className="md:inline-flex hidden">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -43,7 +43,7 @@ export default function BookFreeDemo() {
                 className="absolute bottom-1 right-4 md:hidden block"
               />
             </h3>
-            <p className="font-bold md:text-xl text-md md:text-left text-center">
+            <p className="font-bold md:text-2xl text-lg md:text-left text-center">
               Transforming STEM Education with cutting-edge virtual reality.
             </p>
             <p className="md:text-lg text-md md:text-left text-center">
