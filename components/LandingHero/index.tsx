@@ -10,7 +10,8 @@ export default function LandingHero() {
             <div className="w-full h-full container bg-[url('/background/blocks.png')] bg-cover bg-center flex items-center justify-center md:flex-row flex-col mx-auto">
                 {/* Desktop View */}
                 <div className="md:w-8/12 w-full h-full md:flex hidden flex-col justify-center md:px-0 px-3">
-                    <h1 className="md:text-6xl text-4xl font-bold relative">Virtual & Augmented <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><Image src="/icons/little vr user.png" className="absolute -top-6 right-[19rem] z-10" alt="VR" width={95} height={95} /> Reality <br /> in <span className="bg-blue-500 text-white px-5 py-1 rounded-full inline-flex items-center gap-x-2 mx-2 shadow-md"><FaArrowRightLong className="inline-block text-white" size={40} /> </span>STEM Education for Secondary Schools.</h1>
+                    <h1 className="md:text-6xl text-4xl font-bold relative">Virtual & Augmented <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><Image src="/icons/little vr user.png" className="absolute -top-6 right-[19rem] z-10" alt="VR" width={95} height={95} /> Reality <br /> in 
+                    STEM Education for Secondary Schools.</h1>
                     <p className="md:text-2xl text-lg mt-10">Virtual Science Labs offering engaging STEM courses<br /> accessible on tablet or PC anywhere, anytime.</p>
                     <div className="mt-10 flex items-center gap-x-3">
                         <Link href="/pricing" className="bg-blue-500 text-white px-6 py-3 rounded-md">Get Pricing</Link>

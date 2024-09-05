@@ -6,10 +6,10 @@ import { features } from "@/utils/data/sample"
 
 export default function Features() {
     return (
-        <main className="w-full h-full md:px-10 px-4 ">
+        <main className="w-full h-full">
             <Navbar />
             {/* Features Hero Section */}
-            <section className="w-full md:h-[400px] h-full py-5 flex flex-col md:flex-row items-center justify-between gap-3 bg-[#F5F8FE]">
+            <section className="w-full md:px-10 px-4 md:h-[400px] h-full py-5 flex flex-col md:flex-row items-center justify-between gap-3 bg-[#F5F8FE]">
                 <div className="md:w-6/12 w-full h-full flex flex-col items-center md:items-start justify-center md:text-left text-center space-y-5">
                     <h1 className="text-gray-600 text-lg font-semibold">Why BlueSands STEM Labs?</h1>
                     <p className="md:text-5xl text-lg font-bold">Explore the Future of STEM Education: Unleash the Power of Innovation with Our Cutting-Edge Features</p>
