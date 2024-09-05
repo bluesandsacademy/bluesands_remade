@@ -47,7 +47,7 @@ export default function Physics() {
               </p>
               <p className="md:text-lg text-md md:text-left text-center">
                 Discover the physics universe and unravel the mysteries of
-                motion, energy, and gravitation! In this course, you'll explore
+                motion, energy, and gravitation! In this course, you&apos;ll explore
                 fundamental physics concepts comprehensively, from the basics of
                 scalars and vectors to the complexities of gravitational fields
                 and satellite orbits. Our virtual simulations provide a unique,
@@ -83,19 +83,19 @@ export default function Physics() {
                 </li>
                 <li>
                   Explain gravitational fields, and gravitational potential, and
-                  apply Newton's law of gravitation
+                  apply Newton&apos;s law of gravitation
                 </li>
                 <li>
                   Explain gravitational fields, and gravitational potential, and
-                  apply Newton's law of gravitation
+                  apply Newton&apos;s law of gravitation
                 </li>
                 <li>
-                  Describe satellite orbits and apply Kepler's laws of planetary
+                  Describe satellite orbits and apply Kepler&apos;s laws of planetary
                   motion
                 </li>
                 <li>
                   Analyze static equilibrium and calculate stress, strain, and
-                  Young's modulus
+                  Young&apos;s modulus
                 </li>
                 <li>
                   Understand the principles of simple harmonic motion and the
