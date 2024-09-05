@@ -33,7 +33,7 @@ export default function FAQ() {
               </h3>
               {openIndex === index && <hr className="border-gray-300 w-full" />}
               {openIndex === index && (
-                <p className="text-sm flex-grow">{question.answer}</p>
+                <p className="text-md flex-grow">{question.answer}</p>
               )}
             </div>
           ))}
