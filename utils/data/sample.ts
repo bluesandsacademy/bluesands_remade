@@ -123,3 +123,112 @@ export const features = [
         description: "Our technicians set up and configure the headsets for you, and our educational team teaches you how to use them."
     },
 ]
+
+export const faqData = [
+    {
+        category: "General Questions",
+        questions: [
+            {
+                question: "What is Blue Sands Virtual STEM Labs?",
+                answer:
+                    "Blue Sands Virtual STEM Labs is an online platform that provides interactive, engaging, and educational STEM experiences for students of all ages using VR Headset.",
+            },
+            {
+                question: "How does Blue Sands Virtual STEM Labs work?",
+                answer:
+                    "Users can access a variety of virtual labs through a web browser. These labs simulate real-world experiments, allowing students to explore scientific concepts hands-on.",
+            },
+            {
+                question:
+                    "Is Blue Sands Virtual STEM Labs suitable for all age groups?",
+                answer:
+                    "Yes, Blue Sands Virtual STEM Labs offers a range of labs suitable for different age levels, from elementary to high school.",
+            },
+            {
+                question:
+                    "Do I need any special equipment to use Blue Sands Virtual STEM Labs?",
+                answer:
+                    "No, all you need is a computer or tablet with an internet connection to access and use Blue Sands Virtual STEM Labs.",
+            },
+        ],
+    },
+    {
+        category: "Content and Curriculum",
+        questions: [
+            {
+                question:
+                    "What STEM subjects are covered in Blue Sands Virtual STEM Labs?",
+                answer:
+                    "Our platform covers a wide range of STEM subjects including biology, chemistry, physics, and engineering.",
+            },
+            {
+                question: "Are the virtual labs aligned with educational standards?",
+                answer:
+                    "Yes, our labs are designed to align with national and state education standards.",
+            },
+            {
+                question:
+                    "Can teachers use Blue Sands Virtual STEM Labs for classroom instruction?",
+                answer:
+                    "Absolutely! Teachers can incorporate our labs into their lesson plans to enhance student learning and engagement.",
+            },
+        ],
+    },
+    {
+        category: "Technical Questions",
+        questions: [
+            {
+                question: "Is there a cost to use Blue Sands Virtual STEM Labs?",
+                answer:
+                    "There are both free and paid subscription options available to suit different needs.",
+            },
+            {
+                question: "What happens if I encounter technical difficulties?",
+                answer:
+                    "We offer comprehensive technical support to assist users with any issues they may experience.",
+            },
+            {
+                question:
+                    "Can I access Blue Sands Virtual STEM Labs on mobile devices?",
+                answer:
+                    "Yes, our platform is optimized for both desktop and mobile devices.",
+            },
+        ],
+    },
+    {
+        category: "Parent and Student Concerns",
+        questions: [
+            {
+                question: "Is Blue Sands Virtual STEM Labs safe for children to use?",
+                answer:
+                    "Yes, we prioritize child safety and have implemented robust security measures to protect user data.",
+            },
+            {
+                question: "How can parents monitor their child's progress?",
+                answer:
+                    "We provide tools for parents to track their child's activities and achievements within the platform.",
+            },
+            {
+                question: "Can students collaborate with others on virtual labs?",
+                answer:
+                    "Yes, many of our labs support collaborative learning, allowing students to work together on experiments.",
+            },
+        ],
+    },
+    {
+        category: "Additional Features",
+        questions: [
+            {
+                question: "Does Blue Sands Virtual STEM Labs offer assessments?",
+                answer:
+                    "Yes, we provide assessment tools to help students and teachers measure learning outcomes.",
+            },
+            {
+                question:
+                    "Are there opportunities for students to share their findings?",
+                answer:
+                    "We encourage students to share their discoveries through projects, presentations, or online portfolios.",
+            },
+        ],
+    },
+];
