@@ -1,46 +1,55 @@
+"use client"
+
 import Image from "next/image"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import Link from "next/link"
+import { toast } from "react-toastify"
 
 export default function Contact() {
+
+    function handleSubmit(e: any) {
+        e.preventDefault();
+        toast.info("The contact form is currently under maintenance. Please try again later.");
+    }
+
     return (
         <main className="w-full h-full">
             <Navbar />
             <section className="w-full h-full py-5 flex flex-col md:flex-row items-center justify-between md:px-10 px-4 gap-3 bg-[#F5F8FE]">
-                <form className="md:w-[70%] w-full mx-auto h-full flex flex-col md:flex-row items-start justify-center bg-white shadow-sm border border-gray-300 rounded-md px-3">
+                <form onSubmit={handleSubmit} className="md:w-[70%] w-full mx-auto h-full flex flex-col md:flex-row items-start justify-center bg-white shadow-sm border border-gray-300 rounded-md px-3">
                     <div className="md:w-9/12 w-full h-full md:border-r border-b border-gray-300 py-10 flex items-center justify-center flex-col gap-y-5 px-5">
                         <div className="flex flex-col md:flex-row items-center justify-between w-full gap-x-10 gap-y-5">
                             <div className="w-full space-y-2">
                                 <label htmlFor="firstName" className="text-gray-600 font-bold">First Name</label>
-                                <input type="text" placeholder="Enter First Name" id="firstName" className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" />
+                                <input type="text" placeholder="Enter First Name" id="firstName" className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required />
                             </div>
                             <div className="w-full space-y-2">
                                 <label htmlFor="lastName" className="text-gray-600 font-bold">Last Name</label>
-                                <input type="text" placeholder="Enter Last Name" id="lastName" className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" />
+                                <input type="text" placeholder="Enter Last Name" id="lastName" className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required />
                             </div>
                         </div>
                         <div className="flex flex-col md:flex-row items-center justify-between w-full gap-x-10 gap-y-5">
                             <div className="w-full space-y-2">
                                 <label htmlFor="emailAddress" className="text-gray-600 font-bold">Email Address</label>
-                                <input type="email" placeholder="Enter Email Address" id="emailAddress" className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" />
+                                <input type="email" placeholder="Enter Email Address" id="emailAddress" className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required />
                             </div>
                             <div className="w-full space-y-2">
                                 <label htmlFor="phoneNumber" className="text-gray-600 font-bold">Phone Number</label>
-                                <input type="text" placeholder="Enter Phone Number" id="phoneNumber" className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" />
+                                <input type="text" placeholder="Enter Phone Number" id="phoneNumber" className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required />
                             </div>
                         </div>
                         <div className="flex flex-col items-start justify-start w-full gap-y-5">
                             <div className="w-full space-y-2">
                                 <label htmlFor="subject" className="text-gray-600 font-bold">Subject</label>
-                                <input type="text" placeholder="Enter Your Subject" id="subject" className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" />
+                                <input type="text" placeholder="Enter Your Subject" id="subject" className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required />
                             </div>
                             <div className="w-full space-y-2">
                                 <label htmlFor="message" className="text-gray-600 font-bold">Message</label>
-                                <textarea name="message" id="message" placeholder="Enter Your Message" className="w-full h-32 rounded-md border bg-gray-100 border-gray-300 px-3 py-2"></textarea>
+                                <textarea name="message" id="message" placeholder="Enter Your Message" className="w-full h-32 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required></textarea>
                             </div>
                         </div>
-                        <button className="w-full h-12 rounded-md bg-blue-500 text-white font-bold">Send Message</button>
+                        <button className="w-full h-12 rounded-md bg-blue-500 text-white font-bold" type="submit">Send Message</button>
                     </div>
                     <div className="md:w-3/12 w-full h-full flex flex-col gap-y-3 items-center justify-between p-2">
                         <div className="flex flex-col items-center justify-center gap-y-5 h-fit w-full border p-2 rounded-md border-gray-300">

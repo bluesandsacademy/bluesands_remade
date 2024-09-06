@@ -8,6 +8,9 @@ export const metadata: Metadata = {
 export default function ContactLayout({ children }: { children: React.ReactNode }) {
     return (
         <html>
+            <head>
+                {/* Metadata and other head elements */}
+            </head>
             <body>
                 {children}
             </body>
