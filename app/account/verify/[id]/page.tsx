@@ -41,7 +41,7 @@ export default function VerifyPage({ params }: { params: { id: string } }) {
                 {isVerified === null ? (
                     <>
                         <img
-                            src="/logo/logo.png"
+                            src="/logo/blue_sands_blue.png"
                             className="w-auto h-[80px] mx-auto"
                         />
                         <p className="text-gray-600 text-xl">{verificationMessage}</p>
@@ -49,7 +49,7 @@ export default function VerifyPage({ params }: { params: { id: string } }) {
                 ) : (
                     <>
                         <img
-                            src="/logo/logo.png"
+                            src="/logo/blue_sands_blue.png"
                             className="w-auto h-[80px] mx-auto"
                         />
                         <p
