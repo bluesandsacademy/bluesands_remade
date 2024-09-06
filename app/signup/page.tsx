@@ -256,6 +256,23 @@ export default function Signup() {
                         <>
                             <div className="mx-auto w-full space-y-2">
                                 <label
+                                    className="text-gray-600 font-bold"
+                                    htmlFor="institutionCompanyName"
+                                >
+                                    Name of Institution
+                                </label>
+                                <input
+                                    className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2"
+                                    id="institutionCompanyName"
+                                    type="text"
+                                    placeholder="Name of Institution"
+                                    onChange={handleChange}
+                                    value={formData.institutionCompanyName}
+                                    required
+                                />
+                            </div>
+                            <div className="mx-auto w-full space-y-2">
+                                <label
                                     className=" text-gray-600 font-bold"
                                     htmlFor="position"
                                 >
@@ -277,23 +294,6 @@ export default function Signup() {
                                         </option>
                                     ))}
                                 </select>
-                            </div>
-                            <div className="mx-auto w-full space-y-2">
-                                <label
-                                    className="text-gray-600 font-bold"
-                                    htmlFor="institutionCompanyName"
-                                >
-                                    Name of Institution
-                                </label>
-                                <input
-                                    className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2"
-                                    id="institutionCompanyName"
-                                    type="text"
-                                    placeholder="Name of Institution"
-                                    onChange={handleChange}
-                                    value={formData.institutionCompanyName}
-                                    required
-                                />
                             </div>
                             <div className="mx-auto w-full space-y-2">
                                 <label
