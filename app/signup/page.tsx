@@ -101,7 +101,7 @@ export default function Signup() {
         e.preventDefault();
         try {
             await axios.post(
-                "http://localhost:4000/auth/signup",
+                "https://email-delivery-api.onrender.com/auth/signup",
                 formData
             );
             toast("Sign Up Successful");
