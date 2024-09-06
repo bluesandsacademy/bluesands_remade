@@ -7,8 +7,13 @@ export const metadata: Metadata = {
 
 export default function ChemistryLayout({ children }: { children: React.ReactNode }) {
     return (
-        <div>
-            {children}
-        </div>
-    )
+        <html>
+            <head>
+                {/* Metadata and other head elements */}
+            </head>
+            <body>
+                {children}
+            </body>
+        </html>
+    );
 }

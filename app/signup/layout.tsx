@@ -1,8 +1,10 @@
 import type { Metadata } from "next"
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const metadata: Metadata = {
-    title: "Signup | BlueSands STEM Labs",
-    description: "Signup to BlueSands STEM Labs",
+    title: "Sign Up | BlueSands STEM Labs",
+    description: "Sign Up to BlueSands STEM Labs",
 };
 
 export default function SignUpLayout({
@@ -13,6 +15,7 @@ export default function SignUpLayout({
     return (
         <html>
             <body>
+                <ToastContainer closeOnClick={true} />
                 {children}
             </body>
         </html>

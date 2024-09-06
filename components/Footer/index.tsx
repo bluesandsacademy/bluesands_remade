@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const footerLinks = [
     {
-        title: "Benefits",
-        link: "/benefits",
+        title: "Features",
+        link: "/features",
     },
     {
         title: "Our Prices",
@@ -52,15 +52,11 @@ export default function Footer() {
                             <h3 className="text-lg font-bold">EDO STATE</h3>
                             <p>No 7 Omokhale Street, Off Federal Government Girls College Road. UBTH Back Gate, Benin City.</p>
                         </div>
-                        <div className="flex flex-col gap-y-2">
-                            <h3 className="text-lg font-bold">LAGOS STATE</h3>
-                            <p>House 10 Subuola Abu Street, ​Greenland Estate, Lagos State.</p>
-                        </div>
                     </div>
                 </div>
             </div>
             <div className="w-full flex items-center justify-between border-t border-gray-200 py-10 md:flex-row flex-col gap-y-5">
-                <p className="text-md text-gray-500 font-semibold md:text-left text-center">©{new Date().getFullYear()} Blue Sands STEM Labs. All rights reserved.</p>
+                <p className="text-md text-gray-500 font-semibold md:text-left text-center capitalize">©{new Date().getFullYear()} Blue Sands STEM Labs. All rights reserved.</p>
                 <div className="flex items-center gap-x-3">
                     {socialMedia.map((item, index) => (
                         <Link key={index} href={item.href} target="_blank">

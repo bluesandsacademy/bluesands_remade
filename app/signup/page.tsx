@@ -50,8 +50,6 @@ export default function Signup() {
         password: "",
         position: "",
         institutionCompanyName: "",
-        faculty: "",
-        country: "",
         state: "",
         howCanCompanyHelpYou: "",
         howDidYouHearAboutUs: "",
@@ -60,6 +58,22 @@ export default function Signup() {
     const [selectedAccountType, setSelectedAccountType] = useState(userTypes[0]);
     const [viewPassword, setViewPassword] = useState(false);
     const [loading, setLoading] = useState(false);
+
+
+    function clearForm() {
+        setFormData({
+            fullName: "",
+            emailAddress: "",
+            phoneNumber: "",
+            password: "",
+            position: "",
+            institutionCompanyName: "",
+            state: "",
+            howCanCompanyHelpYou: "",
+            howDidYouHearAboutUs: "",
+            userRole: userTypes[0],
+        })
+    }
 
     function handlePasswordView() {
         setViewPassword(!viewPassword);
@@ -85,7 +99,26 @@ export default function Signup() {
     async function handleSubmit(e: any) {
         setLoading(true);
         e.preventDefault();
-        console.log(formData)
+        try {
+            await axios.post(
+                "http://localhost:4000/auth/signup",
+                formData
+            );
+            toast("Sign Up Successful");
+        } catch (error: any) {
+            console.error(error);
+            if (error && !error.response) {
+                toast("Sign Up Failed... Please Try Again Later");
+                return;
+            }
+
+            if (error && error.response) {
+                toast(error.response.data.message);
+            }
+        } finally {
+            setLoading(false);
+            clearForm();
+        }
     }
 
     return (
@@ -116,14 +149,34 @@ export default function Signup() {
                         />
                     </div>
                     <div className="mx-auto w-full space-y-2">
-                        <label htmlFor="country" className="text-gray-600 font-bold">
-                            Country
+                        <label htmlFor="emailAddress" className="text-gray-600 font-bold">
+                            Email Address
                         </label>
-                        <select name="country" id="country" className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" value={formData.country} onChange={handleSelect}>
-                            {countries.map((item, index) => (
-                                <option key={index} value={item}>{item}</option>
-                            ))}
-                        </select>
+                        <input
+                            type="text"
+                            placeholder="Enter Email Address"
+                            id="emailAddress"
+                            name="emailAddress"
+                            className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2"
+                            required
+                            value={formData.emailAddress}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="mx-auto w-full space-y-2">
+                        <label htmlFor="phoneNumber" className="text-gray-600 font-bold">
+                            Phone Number
+                        </label>
+                        <input
+                            type="text"
+                            placeholder="Enter Phone Number"
+                            id="phoneNumber"
+                            name="phoneNumber"
+                            className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2"
+                            required
+                            value={formData.phoneNumber}
+                            onChange={handleChange}
+                        />
                     </div>
                     <div className="mx-auto w-full space-y-2 relative">
                         <label htmlFor="password" className="text-gray-600 font-bold">
@@ -175,32 +228,30 @@ export default function Signup() {
                             </button>
                         </div>
                     </div>
-                    {formData.country === "Nigeria" && (
-                        <div className="w-full space-y-2">
-                            <label
-                                className="text-gray-600 font-bold"
-                                htmlFor="state"
-                            >
-                                State
-                            </label>
-                            <select
-                                className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2"
-                                id="state"
-                                onChange={handleSelect}
-                                required
-                                value={formData.state}
-                            >
-                                <option value="" className="text-gray-600 font-bold">
-                                    {"<--"} Select {"-->"}
+                    <div className="w-full space-y-2">
+                        <label
+                            className="text-gray-600 font-bold"
+                            htmlFor="state"
+                        >
+                            State
+                        </label>
+                        <select
+                            className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2"
+                            id="state"
+                            onChange={handleSelect}
+                            required
+                            value={formData.state}
+                        >
+                            <option value="" className="text-gray-600 font-bold">
+                                {"<--"} Select {"-->"}
+                            </option>
+                            {nigerianStates.map((state, index) => (
+                                <option className="text-gray-600 font-bold" key={index} value={state}>
+                                    {state}
                                 </option>
-                                {nigerianStates.map((state, index) => (
-                                    <option className="text-gray-600 font-bold" key={index} value={state}>
-                                        {state}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
-                    )}
+                            ))}
+                        </select>
+                    </div>
                     {selectedAccountType === "School" && (
                         <>
                             <div className="mx-auto w-full space-y-2">
@@ -243,30 +294,6 @@ export default function Signup() {
                                     value={formData.institutionCompanyName}
                                     required
                                 />
-                            </div>
-                            <div className="mx-auto w-full space-y-2">
-                                <label
-                                    className="text-gray-600 font-bold"
-                                    htmlFor="faculty"
-                                >
-                                    Faculty
-                                </label>
-                                <select
-                                    className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2"
-                                    id="faculty"
-                                    onChange={handleSelect}
-                                    required
-                                    value={formData.faculty}
-                                >
-                                    <option value="" className="text-gray-600 font-bold">
-                                        {"<--"} Select {"-->"}
-                                    </option>
-                                    {faculties.map((faculty, index) => (
-                                        <option key={index} className="text-gray-600 font-bold" value={faculty}>
-                                            {faculty}
-                                        </option>
-                                    ))}
-                                </select>
                             </div>
                             <div className="mx-auto w-full space-y-2">
                                 <label
@@ -323,7 +350,7 @@ export default function Signup() {
                             I agree with the <Link href="#" className="underline">Terms of Use</Link> and <Link href="#" className="underline">Privacy Policy</Link>
                         </label>
                     </div>
-                    <button type="submit" className="w-full h-12 rounded-md bg-blue-500 text-white">Sign Up</button>
+                    <button type="submit" className="w-full h-12 rounded-md bg-blue-500 text-white flex flex-row items-center justify-center gap-x-2">{loading ? <Puff color="#fff" height={20} width={20} /> : "Sign Up"}</button>
                     <p className="w-full flex flex-row items-center justify-center gap-x-2">Already have an account? <Link href="/login" className="underline">Login</Link></p>
                 </form>
                 <div className="md:w-6/12 w-full h-full flex flex-col gap-5 items-start justify-center">
