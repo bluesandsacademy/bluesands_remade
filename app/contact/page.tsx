@@ -51,7 +51,7 @@ export default function Contact() {
                                 height={50}
                                 className="mx-auto"
                             />
-                            <p className="text-gray-600 font-semibold text-sm text-center">support@BlueSandsSTEM.com</p>
+                            <p className="text-gray-600 font-semibold text-sm text-center lowercase">info@bluesandsstemlabs.com</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-y-5 h-fit w-full border p-2 rounded-md border-gray-300">
                             <Image
@@ -71,7 +71,7 @@ export default function Contact() {
                                 height={50}
                                 className="mx-auto"
                             />
-                            <p className="text-gray-600 font-semibold text-sm text-center">LAGOS STATE<br />House 10 Subuola Abu Street, ​Greenland Estate, Lagos State.</p>
+                            <p className="text-gray-600 font-semibold text-sm text-center">EDO STATE<br />No 7 Omokhale Street, Off Federal Government Girls College Road. UBTH Back Gate, Benin City.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-y-5 h-fit w-full border p-2 rounded-md border-gray-300">
                             <div className="flex items-center justify-center gap-x-5">
