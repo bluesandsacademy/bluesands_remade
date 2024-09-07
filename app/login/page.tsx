@@ -119,7 +119,7 @@ export default function Login() {
                         </button>
                     </div>
                     <button type="submit" className="w-full h-12 rounded-md bg-blue-500 text-white flex flex-row items-center justify-center gap-x-2">{loading ? <Puff color="#fff" height={20} width={20} /> : "Login"}</button>
-                    <p className="w-full flex flex-row items-center justify-center gap-x-2">Don't have an account? <Link href="/signup" className="underline">Sign Up</Link></p>
+                    <p className="w-full flex flex-row items-center justify-center gap-x-2">Don&apos;t have an account? <Link href="/signup" className="underline">Sign Up</Link></p>
                 </form>
             </div>
             <Footer />
