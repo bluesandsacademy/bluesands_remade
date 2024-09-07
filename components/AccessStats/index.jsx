@@ -48,7 +48,7 @@ export default function AccessStats() {
           <Image
             src="/icons/little vr user 3.png"
             alt="science"
-            className="absolute top-6 left-[11.3rem]"
+            className="absolute top-6 left-[12.3rem]"
             width={50}
             height={50}
           />
