@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import type { Metadata } from "next"
+import { AuthProvider } from "@/context/AuthContext";
 
 export const metadata: Metadata = {
     title: "Dashboard | BlueSands STEM Labs",
@@ -11,13 +12,15 @@ export const metadata: Metadata = {
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html>
-            <body>
-                <ToastContainer position="top-right" />
-                <Navbar />
-                {children}
-                <Footer />
-            </body>
-        </html>
+        <AuthProvider>
+            <html>
+                <body>
+                    <ToastContainer position="top-right" />
+                    <Navbar />
+                    {children}
+                    <Footer />
+                </body>
+            </html>
+        </AuthProvider>
     )
 }
