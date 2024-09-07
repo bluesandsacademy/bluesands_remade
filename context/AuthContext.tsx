@@ -5,6 +5,20 @@ import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 import { baseUrl } from '@/utils/data/sample';
 
+// Set up an Axios interceptor
+axios.interceptors.request.use(
+    (config) => {
+        const token = localStorage.getItem('blue_sands_user@token');
+        if (token) {
+            config.headers['Authorization'] = `Bearer ${token}`;
+        }
+        return config;
+    },
+    (error) => {
+        return Promise.reject(error);
+    }
+);
+
 interface AuthContextType {
     isAuthenticated: boolean;
     storeToken: (token: string) => void;
