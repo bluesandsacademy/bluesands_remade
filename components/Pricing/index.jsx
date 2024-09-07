@@ -11,7 +11,7 @@ const pricingData = [
       "Outstanding value, because we believe in enhancing science ed everywhere!",
     price: "₦0",
     features: [
-      "1 Month",
+      "14 Days Free Trial",
       "Full Access to 10 Simulations",
       "No Credit Card Required",
       "14-Day Money-Back Guarantee",

@@ -2,7 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import { countries, workPosition, faculties, howYouHeardAboutUsList, nigerianStates } from "@/utils/data/sample";
+import { countries, workPosition, faculties, howYouHeardAboutUsList, nigerianStates, baseUrl } from "@/utils/data/sample";
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -101,7 +101,7 @@ export default function Signup() {
         e.preventDefault();
         try {
             await axios.post(
-                "https://email-delivery-api.onrender.com/auth/signup",
+                `${baseUrl}/auth/signup`,
                 formData
             );
             toast("Sign Up Successful");

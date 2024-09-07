@@ -2,8 +2,11 @@
 
 import { useEffect, useState } from "react"
 import axios from "axios"
-
+import { baseUrl } from "@/utils/data/sample"
+import { useRouter } from "next/navigation"
+import { toast } from "react-toastify"
 export default function VerifyPage({ params }: { params: { id: string } }) {
+    const router = useRouter()
     const [verificationMessage, setVerificationMessage] = useState(
         "Verifying your email..."
     );
@@ -13,17 +16,23 @@ export default function VerifyPage({ params }: { params: { id: string } }) {
         const verifyEmail = async () => {
             try {
                 const response = await axios.get(
-                    `http://localhost:4000/auth/verify/${params.id}`
+                    `${baseUrl}/auth/verify/${params.id}`
                 );
                 if (response.status === 200) {
                     setIsVerified(true);
                     setVerificationMessage(
                         "Your email has been successfully verified! A representative will reach out to you soon"
                     );
+                    toast.success("Your email has been successfully verified! A representative will reach out to you soon");
+
+                    setTimeout(() => {
+                        router.push("/login");
+                    }, 3000);
                 } else {
                     setIsVerified(false);
                     setVerificationMessage("Invalid or expired verification link.");
                 }
+
             } catch (error) {
                 console.error(error);
                 setIsVerified(false);

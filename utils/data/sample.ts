@@ -533,3 +533,6 @@ export const faculties = [
     "Others",
 ];
 
+export const baseUrl = process.env.NODE_ENV === 'production'
+  ? "https://email-delivery-api.onrender.com"
+  : "http://localhost:4000";

@@ -9,11 +9,13 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { motion, AnimatePresence } from "framer-motion"
 import { IoMdClose } from "react-icons/io";
+import { useAuth } from "@/context/AuthContext";
 
 export default function Navbar() {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+    const { isAuthenticated, logout } = useAuth();
 
     return (
         <nav className="w-full flex items-center justify-between py-4 px-4 md:px-10 relative">
@@ -21,7 +23,11 @@ export default function Navbar() {
                 <Image src="/logo/logo.png" alt="BlueSands STEM Labs" width={100} height={100} />
             </Link>
             <div className="md:hidden flex items-center gap-x-5">
-                <button className="bg-blue-500 text-white px-6 py-3 rounded-md">Sign Up</button>
+                {isAuthenticated ? (
+                    <Link href="/dashboard" className="bg-blue-500 text-white px-6 py-3 rounded-md">Dashboard</Link>
+                ) : (
+                    <Link href="/signup" className="bg-blue-500 text-white px-6 py-3 rounded-md">Sign Up</Link>
+                )}
                 <GiHamburgerMenu className="text-3xl" onClick={() => setIsMobile(!isMobile)} />
             </div>
             <ul className="md:flex hidden items-center justify-between gap-x-3 ">
@@ -47,7 +53,11 @@ export default function Navbar() {
                 ))}
             </ul>
             <div className="hidden md:block">
-                <Link href="/signup" className="bg-blue-500 text-white px-6 py-3 rounded-md">Sign Up</Link>
+                {isAuthenticated ? (
+                    <Link href="/dashboard" className="bg-blue-500 text-white px-6 py-3 rounded-md">Dashboard</Link>
+                ) : (
+                    <Link href="/signup" className="bg-blue-500 text-white px-6 py-3 rounded-md">Sign Up</Link>
+                )}
             </div>
             {isMobile && (
                 <AnimatePresence>
@@ -74,6 +84,17 @@ export default function Navbar() {
                                     )}
                                 </li>
                             ))}
+                            {isAuthenticated && (
+                                <button
+                                    onClick={() => {
+                                        logout();
+                                        setIsMobile(false);
+                                    }}
+                                    className="mt-4 text-gray-800 hover:text-blue-500 transition-all duration-800"
+                                >
+                                    Logout
+                                </button>
+                            )}
                         </ul>
                     </motion.div>
                 </AnimatePresence>

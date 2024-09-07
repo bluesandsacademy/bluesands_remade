@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AuthProvider } from "@/context/AuthContext";
 
 export const metadata: Metadata = {
   title: "BlueSands STEM Labs | Innovative VR/AR STEM Education",
@@ -10,14 +11,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html>
-      <head>
-        {/* Metadata and other head elements */}
-      </head>
-      <body>
-        <ToastContainer closeOnClick={true} />
-        {children}
-      </body>
-    </html>
+    <AuthProvider>
+      <html>
+        <head>
+          {/* Metadata and other head elements */}
+        </head>
+        <body>
+          <ToastContainer closeOnClick={true} />
+          {children}
+        </body>
+      </html>
+    </AuthProvider>
   );
 }
