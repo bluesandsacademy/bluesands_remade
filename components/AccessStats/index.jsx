@@ -1,30 +1,31 @@
 import Image from "next/image";
 import { IoStar } from "react-icons/io5";
+import Link from "next/link";
 
 const labs = [
   {
-    title: "Biology Online Labs",
+    title: "Biology Virtual Labs",
     description:
       "There are many ways that VR can be used to teach science, but biology is an ideal subject for immersive learning experiences.",
     ratings: 4.5,
     reviews: 120,
-    image: "/labs/biology.png",
+    image: "/labs/biology_lab.png",
   },
   {
-    title: "Physics Online Labs",
+    title: "Physics Virtual Labs",
     description:
       "There are many ways that VR can be used to teach science, but biology is an ideal subject for immersive learning experiences.",
     ratings: 4.5,
     reviews: 120,
-    image: "/labs/physics.png",
+    image: "/labs/physics_lab.png",
   },
   {
-    title: "Chemistry Online Labs",
+    title: "Chemistry Virtual Labs",
     description:
       "There are many ways that VR can be used to teach science, but biology is an ideal subject for immersive learning experiences.",
     ratings: 4.5,
     reviews: 120,
-    image: "/labs/chemistry.png",
+    image: "/labs/chemistry_lab.webp",
   },
 ];
 
@@ -74,9 +75,9 @@ export default function AccessStats() {
                 <p className="text-sm">{lab.description}</p>
               </div>
               <div className="flex items-center gap-2 justify-between w-full">
-                <button className="bg-blue-500 text-white px-4 py-2 rounded-md">
+                <Link href="/signup" className="bg-blue-500 text-white px-4 py-2 rounded-md">
                   Enroll Now
-                </button>
+                </Link>
                 <button className="flex items-center gap-2 border border-gray-400 px-4 py-2 rounded-md">
                   <IoStar className="text-blue-500" />
                   <span className="font-bold">{lab.ratings}</span>
