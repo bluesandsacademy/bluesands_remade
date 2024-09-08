@@ -21,7 +21,8 @@ axios.interceptors.request.use(
 
 interface AuthContextType {
     isAuthenticated: boolean;
-    storeToken: (token: string) => void;
+    storeToken: (token: string, user: any) => void;
+    user: any;
     getProfile: () => Promise<any>;
     logout: () => void;
 }
@@ -32,10 +33,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const router = useRouter()
     const pathname = usePathname();
     const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+    const [user, setUser] = useState<any>(null);
 
     useEffect(() => {
         const token = localStorage.getItem('blue_sands_user@token');
+        const user = localStorage.getItem('blue_sands_user@user');
         setIsAuthenticated(token ? true : false)
+        setUser(user ? JSON.parse(user) : null)
     }, [isAuthenticated]);
 
     useEffect(() => {
@@ -49,8 +53,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         }
     }, [isAuthenticated, pathname]);
 
-    const storeToken = (token: string) => {
+    const storeToken = (token: string, user: any) => {
         localStorage.setItem('blue_sands_user@token', token);
+        localStorage.setItem('blue_sands_user@user', JSON.stringify(user));
         setIsAuthenticated(true);
     };
 
@@ -63,7 +68,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             const response = await axios.get(`${baseUrl}/auth/profile`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
-            console.log(response.data)
             return response.data.user;
         } catch (error) {
             console.error('Error fetching profile:', error);
@@ -78,7 +82,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     };
 
     return (
-        <AuthContext.Provider value={{ isAuthenticated, storeToken, getProfile, logout }}>
+        <AuthContext.Provider value={{ isAuthenticated, storeToken, user, getProfile, logout }}>
             {children}
         </AuthContext.Provider>
     );
