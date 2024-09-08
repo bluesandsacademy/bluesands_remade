@@ -266,8 +266,8 @@ export default function Dashboard() {
     }
 
     const components = [
-        <PaymentHistoryComponent next={next} prev={prev} profile={profile} />,
-        <PaymentComponent next={next} prev={prev} />
+        <PaymentHistoryComponent next={next} prev={prev} profile={profile} key={0} />,
+        <PaymentComponent next={next} prev={prev} key={1} />
     ]
 
     return (
