@@ -42,7 +42,7 @@ export default function Login() {
         e.preventDefault();
         try {
             const response = await axios.post(`${baseUrl}/auth/login`, formData);
-            storeToken(response.data.token);
+            storeToken(response.data.token, response.data.user);
             toast.success("Login successful");
             router.push("/dashboard");
         } catch (error) {
