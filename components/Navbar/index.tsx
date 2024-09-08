@@ -56,7 +56,11 @@ export default function Navbar() {
                 {isAuthenticated ? (
                     <Link href="/dashboard" className="bg-blue-500 text-white px-6 py-3 rounded-md">Dashboard</Link>
                 ) : (
-                    <Link href="/signup" className="bg-blue-500 text-white px-6 py-3 rounded-md">Sign Up</Link>
+
+                    <div className="flex items-center gap-x-3">
+                        <Link href="/signup" className="bg-blue-500 text-white px-6 py-3 rounded-md">Sign Up</Link>
+                        <Link href="/login" className="border border-gray-300 px-6 py-3 rounded-md">Login</Link>
+                    </div>
                 )}
             </div>
             {isMobile && (
