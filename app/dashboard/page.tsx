@@ -36,9 +36,6 @@ const PaymentComponent = ({ next, prev }: { next: () => void, prev: () => void }
     const [selectedPlan, setSelectedPlan] = useState<any>(null);
     const [config, setConfig] = useState<any>();
 
-    const { refresh } = useRouter();
-
-
     const handleCreatePayment = async (amount: number) => {
         setLoading(true);
         try {
@@ -48,7 +45,7 @@ const PaymentComponent = ({ next, prev }: { next: () => void, prev: () => void }
             });
 
             toast("Payment successful");
-            refresh()
+            window.location.reload();
         } catch (error: any) {
             console.error(error)
             if (error && error.response && error.response.data && error.response.data.message) {

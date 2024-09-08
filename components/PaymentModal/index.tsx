@@ -23,6 +23,9 @@ const ConfirmPaymentModal = ({ open, onClose, selectedPlan }: { open: boolean, o
     const onTransactionSuccess = async () => {
         toast.success("Payment successful");
         onClose();
+        setTimeout(() => {
+            window.location.reload();
+        }, 1000);
     }
 
     const onTransactionClose = () => {
