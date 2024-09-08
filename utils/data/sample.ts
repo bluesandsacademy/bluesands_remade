@@ -40,12 +40,13 @@ export const topNav = [
 ]
 
 export const brandLogos = [
-    "/brand/Logo.png",
-    "/brand/Logo-1.png",
-    "/brand/Logo-2.png",
-    "/brand/Logo-3.png",
-    "/brand/Logo-4.png",
-    "/brand/Logo-5.png"
+    "/brand/school_1.png",
+    "/brand/school_2.png",
+    "/brand/school_3.png",
+    "/brand/school_4.png",
+    "/brand/school_5.png",
+    "/brand/school_6.png",
+    "/brand/school_7.png"
 ]
 
 export const socialMedia = [
@@ -534,5 +535,5 @@ export const faculties = [
 ];
 
 export const baseUrl = process.env.NODE_ENV === 'production'
-  ? "https://email-delivery-api.onrender.com"
-  : "http://localhost:4000";
+    ? "https://email-delivery-api.onrender.com"
+    : "http://localhost:4000";
