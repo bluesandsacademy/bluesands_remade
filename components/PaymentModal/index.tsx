@@ -7,10 +7,10 @@ import axios from 'axios';
 import { baseUrl } from '@/utils/data/sample';
 import { Puff } from "react-loader-spinner";
 
-const ConfirmPaymentModal = ({ open, onClose, selectedPlan }: { open: boolean, onClose: () => void, selectedPlan: any }) => {
+const ConfirmPaymentModal = ({ open, onClose, selectedPlan, paymentRef }: { open: boolean, onClose: () => void, selectedPlan: any, paymentRef?: string }) => {
     const { user } = useAuth();
     const [loading, setLoading] = useState<boolean>(false);
-    const [paymentReference] = useState<string>(nanoid());
+    const [paymentReference] = useState<string>(paymentRef || nanoid());
     const initializePayment = usePaystackPayment({
         publicKey: process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY as string,
         amount: user.userRole === "Individual"
@@ -30,17 +30,20 @@ const ConfirmPaymentModal = ({ open, onClose, selectedPlan }: { open: boolean, o
 
     const onTransactionClose = () => {
         toast.error("Payment cancelled");
+        window.location.reload();
     }
 
     async function handlePayment() {
         setLoading(true);
         try {
-            const response = await axios.post(`${baseUrl}/auth/make-payment`, {
-                amount: user.userRole === "Individual"
-                    ? (selectedPlan.title === "Free Plan" ? 0 : 20000 * 100)
-                    : (user.userRole === "School" ? 15000 * 100 : 20000 * 100),
-                paymentReference: paymentReference,
-            });
+            if (!paymentRef) {
+                await axios.post(`${baseUrl}/auth/make-payment`, {
+                    amount: user.userRole === "Individual"
+                        ? (selectedPlan.title === "Free Plan" ? 0 : 20000 * 100)
+                        : (user.userRole === "School" ? 15000 * 100 : 20000 * 100),
+                    paymentReference: paymentReference,
+                });
+            }
 
             initializePayment({
                 onSuccess: onTransactionSuccess,

@@ -117,17 +117,27 @@ const PaymentComponent = ({ next, prev }: { next: () => void, prev: () => void }
 
 const PaymentHistoryComponent = ({ next, prev, profile }: { next: () => void, prev: () => void, profile: any }) => {
     const { logout } = useAuth();
+    const [modal, setModal] = useState<boolean>(false);
+    const [selectedPlan, setSelectedPlan] = useState<any>(null);
+    const [paymentRef, setPaymentRef] = useState<string | null>(null);
 
     return (
-        <>
+        <div className="flex flex-col items-center justify-center gap-y-3 w-full">
+            {modal && <ConfirmPaymentModal open={modal} onClose={() => setModal(false)} selectedPlan={selectedPlan} paymentRef={paymentRef || undefined} />}
             <div className="flex flex-col items-center justify-center gap-y-3">
                 <h1 className="text-4xl font-bold">User Information</h1>
                 <p className="text-2xl">{profile?.fullName}</p>
                 <p className="text-xl">{profile?.emailAddress}</p>
                 <p className="text-lg border border-gray-300 text-gray-700 p-2 rounded-md cursor-pointer">{profile?.userRole}</p>
                 <button className="bg-blue-500 text-white p-2 rounded-md cursor-pointer" onClick={next}>Make Payment</button>
+                <button
+                    onClick={logout}
+                    className="mt-6 text-blue-500 hover:text-blue-600 transition mx-auto"
+                >
+                    Logout
+                </button>
             </div>
-            <div className="flex flex-col items-center justify-center gap-y-3 overflow-x-scroll w-full">
+            <div className="flex flex-col items-center justify-center gap-y-3 overflow-x-scroll w-fit">
                 <h2 className="text-2xl font-bold">Payment History</h2>
                 {profile?.payments && profile.payments.length > 0 ? (
                     <div className="w-full max-w-2xl">
@@ -156,7 +166,13 @@ const PaymentHistoryComponent = ({ next, prev, profile }: { next: () => void, pr
                                         <td className="border border-gray-300 p-2">{payment.paymentReference}</td>
                                         {payment.paymentStatus === "Pending" && (
                                             <td className="border border-gray-300 p-2">
-                                                <button className="bg-blue-500 text-white p-2 rounded-md cursor-pointer">
+                                                <button className="bg-blue-500 text-white p-2 rounded-md cursor-pointer" 
+                                                    onClick={() => {
+                                                        setSelectedPlan(payment.paymentPlan)
+                                                        setPaymentRef(payment.paymentReference)
+                                                        setModal(true)
+                                                    }}
+                                                >
                                                     Pay
                                                 </button>
                                             </td>
@@ -170,13 +186,7 @@ const PaymentHistoryComponent = ({ next, prev, profile }: { next: () => void, pr
                     <p className="text-xl">No payment history available</p>
                 )}
             </div>
-            <button
-                onClick={logout}
-                className="mt-6 text-blue-500 hover:text-blue-600 transition mx-auto"
-            >
-                Logout
-            </button>
-        </>
+        </div>
     )
 }
 
@@ -208,7 +218,7 @@ export default function Dashboard() {
     ]
 
     return (
-        <div className="flex flex-col items-center justify-start py-10 h-[80vh] gap-y-10">
+        <div className="flex flex-col items-center justify-start py-10 min-h-[80vh] gap-y-10">
             {components[component]}
         </div>
     )
