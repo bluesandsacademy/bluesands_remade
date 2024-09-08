@@ -31,7 +31,7 @@ export const topNav = [
     },
     {
         title: "Blog",
-        href: "/blog"
+        href: "blog.bluesandsacademy.org"
     },
     {
         title: "Contact",
