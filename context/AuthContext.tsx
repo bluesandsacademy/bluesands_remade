@@ -48,6 +48,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             router.push('/dashboard');
         }
 
+        if (pathname === '/signup' && token) {
+            router.push('/dashboard');
+        }
+
         if (pathname === '/dashboard' && !token) {
             router.push('/login');
         }
