@@ -53,7 +53,7 @@ function OTPForm({ formData, handleChange, handleSubmitOTP, loading, resendPassw
                 />
                 <button type="submit" className="w-full h-12 rounded-md bg-blue-500 text-white flex flex-row items-center justify-center gap-x-2">{loading ? <Puff color="#fff" height={20} width={20} /> : "Submit"}</button>
                 <p className="text-gray-500 font-normal text-xl text-center">
-                    Didn't receive the OTP? <button onClick={resendPassword} className="text-blue-500 font-semibold">Resend OTP</button>.
+                    Didn&apos;t receive the OTP? <button onClick={resendPassword} className="text-blue-500 font-semibold">Resend OTP</button>.
                 </p>
             </div>
         </form>
