@@ -8,6 +8,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import { Puff } from "react-loader-spinner";
+import { baseUrl } from "@/utils/data/sample";
 
 const content = [
   {
@@ -61,7 +62,7 @@ export default function DemoRequest() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
-    const baseUrl = `http://email-delivery-api.onrender.com/request-demo`;
+    const baseUrl = `https://email-delivery-api.onrender.com/request-demo`;
     setLoading(true);
 
     try {
