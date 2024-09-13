@@ -122,8 +122,8 @@ export default function Contact() {
                     <div className="md:w-6/12 w-full h-full">
                         <div className="md:w-[70%] w-full h-full p-3 relative">
                             <Image
-                                src="/stock/guy using vr.png"
-                                alt="guy using vr"
+                                src="/stock/girl and guy.png"
+                                alt="girl and guy using vr"
                                 width={500}
                                 height={500}
                                 className="h-full w-full object-contain mx-auto"
