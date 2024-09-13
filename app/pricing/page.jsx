@@ -1,10 +1,10 @@
 "use client";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Pricing from "@/components/Pricing";
 import Image from "next/image";
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
+import Link from 'next/link'
 
 const content = [
   {
@@ -157,7 +157,7 @@ export default function PricingPage() {
                       : item.price}
                   </p>
                 </div>
-                <div className="bg-white rounded-md w-full h-fit shadow-sm space-y-3">
+                <div className="bg-white rounded-md w-full flex items-center flex-col justify-center h-fit shadow-sm gap-y-3">
                   <h3 className="font-semibold text-lg text-center mt-2">
                     Available Features
                   </h3>
@@ -174,9 +174,9 @@ export default function PricingPage() {
                       </li>
                     ))}
                   </ul>
-                  <button className="bg-blue-500 text-white rounded-b-md px-2 py-3 w-full">
+                  <Link href="/signup" className="bg-blue-500 text-white rounded-b-md px-2 py-3 w-full text-center">
                     Get Started
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
