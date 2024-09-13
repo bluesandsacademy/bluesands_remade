@@ -46,6 +46,8 @@ export default function DemoRequest() {
     position: "",
     country: "",
     course: "",
+    time: null,
+    date: null,
     emailOptIn: false,
   });
   const [loading, setLoading] = useState(false);
@@ -62,12 +64,12 @@ export default function DemoRequest() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
-    const baseUrl = `https://email-delivery-api.onrender.com/request-demo`;
+    const endpoint = `${baseUrl}/request-demo`;
     setLoading(true);
 
     try {
       toast("Successfully Processed Demo Request");
-      await axios.post(baseUrl, formData);
+      await axios.post(endpoint, formData);
       router.push("/demo-request/success");
     } catch (error) {
       toast.error(
@@ -314,11 +316,11 @@ export default function DemoRequest() {
           </div>
           <div>
             <Image
-              src="/stock/child using laptop.png"
+              src="/labs/biology_lab.png"
               alt="child using laptop"
               width={500}
               height={500}
-              className="md:block hidden"
+              className="md:block hidden h-full w-full"
             />
           </div>
         </div>
