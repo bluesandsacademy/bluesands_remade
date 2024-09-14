@@ -376,7 +376,7 @@ export default function Signup() {
                     </div>
                     <div>
                         <Image
-                            src="/stock/two women looking at laptop.png"
+                            src={userType === "School" ? "/stock/individual.png" : "/stock/two women looking at laptop.png"}
                             alt="two women looking at laptop"
                             width={500}
                             height={500}
