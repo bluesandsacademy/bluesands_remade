@@ -41,7 +41,7 @@ export default function Features() {
                 </div>
             </section>
             {/* Features */}
-            <WhyBlueSands page="features" />
+            <WhyBlueSands page="features" />       
             <Footer />
         </main>
     );

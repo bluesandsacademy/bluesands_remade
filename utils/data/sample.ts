@@ -4,22 +4,8 @@ export const topNav = [
         href: "/"
     },
     {
-        title: "Virtual STEM Labs",
-        href: null,
-        dropdown: [
-            {
-                title: "Virtual Biology",
-                href: "/virtual-labs/biology"
-            },
-            {
-                title: "Virtual Chemistry",
-                href: "/virtual-labs/chemistry"
-            },
-            {
-                title: "Virtual Physics",
-                href: "/virtual-labs/physics"
-            }
-        ]
+        title: "Virtual STEM Lab",
+        href: "/virtual-stem-lab"
     },
     {
         title: "Features",
@@ -31,7 +17,7 @@ export const topNav = [
     },
     {
         title: "Blog",
-        href: "blog.bluesandsacademy.org"
+        href: "https://blog.bluesandsacademy.org"
     },
     {
         title: "Contact",

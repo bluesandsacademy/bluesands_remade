@@ -7,8 +7,16 @@ import { RxCross2 } from "react-icons/rx";
 import { LuPlus } from "react-icons/lu";
 import { useState } from "react";
 
-export default function FAQ() {
+export default function FAQ({ page = "home" }) {
   const [openIndex, setOpenIndex] = useState(null);
+  const image = {
+    home: {
+      image: "/labs/physics_lab.png",
+    },
+    pricing: {
+      image: "/labs/pricing-lab.png",
+    },
+  };
   return (
     <div className="w-full h-full bg-white md:px-20 px-4 py-10">
       <div className="h-fit mx-auto flex md:flex-row flex-col gap-5 items-start justify-between">
@@ -55,11 +63,11 @@ export default function FAQ() {
             Contact Us
           </Link>
           <Image
-            src="/stock/man using vr 2.png"
+            src={image[page].image}
             alt="FAQ"
             width={400}
             height={400}
-            className="w-full h-full object-contain"
+            className="w-full h-full object-contain rounded-md"
           />
         </div>
       </div>

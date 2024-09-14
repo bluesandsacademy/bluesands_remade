@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import Link from 'next/link'
+import FAQ from "@/components/FAQ";
 
 const content = [
   {
@@ -183,6 +184,7 @@ export default function PricingPage() {
           </div>
         </div>
       </div>
+      <FAQ page="pricing" />
       <Footer />
     </main>
   );
