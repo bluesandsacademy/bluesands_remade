@@ -8,7 +8,16 @@ const answers = [
   "Flexible Access via Tablet or PC.",
 ];
 
-export default function WhyBlueSands() {
+export default function WhyBlueSands({ page = "home" }) {
+  const images = {
+    home: {
+      image: "/labs/feat-lab.png",
+    },
+    features: {
+      image: "/labs/man standing.png",
+    },
+  };
+
   return (
     <div className="w-full py-10 h-full bg-white">
       <div className="container mx-auto flex flex-col md:flex-row justify-center gap-5">
@@ -22,18 +31,11 @@ export default function WhyBlueSands() {
               className="absolute md:-top-5 md:-left-5 -top-3 left-5 md:w-[150px] w-[100px]"
             />
             <Image
-              src="/stock/man sitting with laptop.png"
+              src={images[page].image}
               alt="man sitting with laptop"
               width={500}
               height={500}
-              className="mx-auto md:block hidden"
-            />
-            <Image
-              src="/stock/man using vr.png"
-              alt="man using vr"
-              width={300}
-              height={300}
-              className="mx-auto md:hidden block"
+              className="mx-auto"
             />
           </div>
         </div>

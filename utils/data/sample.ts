@@ -125,6 +125,34 @@ export const features = [
     },
 ]
 
+export const featuresGrid = [
+    {
+        title: "Set up & Training",
+        img: "/feature/grid/01.png",
+        description: "Our technicians set up and configure the headsets for you, and our educational team teaches you how to use them."
+    },
+    {
+        title: "Curriculum Aligned Content ",
+        img: "/feature/grid/02.png",
+        description: "Blue Sands STEM Lab offers thousands of virtual and augmented reality resources to enhance lessons across any subject."
+    },
+    {
+        title: "Virtual Reality Headset ",
+        img: "/feature/grid/03.png",
+        description: "Blue Sands STEM Lab offers a fully integrated, classroom-ready VR headset with no additional hardware required to get started"
+    },
+    {
+        title: "3D Virtual Experiments & Immersive Interaction ",
+        img: "/feature/grid/04.png",
+        description: "Blue Sands STEM Lab provides interactive 3D virtual science experiments and realistic lab simulations, boosting time management, lab skills, and knowledge while covering any STEM curriculum."
+    },
+    {
+        title: "Virtual Experiments, Adaptive to Any Learning Style ",
+        img: "/feature/grid/05.png",
+        description: "Blue Sands STEM Lab offers game-like online science simulations with features like an interactive lab partner, hints, and progress tracking, making learning intuitive and adaptable to any style."
+    },
+]
+
 export const faqData = [
     {
         category: "General Questions",

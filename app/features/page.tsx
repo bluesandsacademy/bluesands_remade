@@ -2,7 +2,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar"
 import Footer from '@/components/Footer'
 import WhyBlueSands from '@/components/WhyBlueSands'
-import { features } from "@/utils/data/sample"
+import { featuresGrid } from "@/utils/data/sample"
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from 'next/link';
 
@@ -29,19 +29,19 @@ export default function Features() {
             {/* Features */}
             <section className="w-full h-full py-10">
                 <div className="container mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center">
-                        {features.map((feature, index) => (
-                            <div key={index} className="bg-white rounded-lg shadow-sm border-[0.3px] border-gray-200 py-5 px-3 md:w-[90%] w-full space-y-3">
-                                <Image src={feature.icon} alt={feature.title} width={50} height={50} />
-                                <h3 className="text-lg font-semibold mb-3">{feature.title}</h3>
-                                <p className="text-gray-600">{feature.description}</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-16 gap-5 justify-center">
+                        {featuresGrid.map((feature, index) => (
+                            <div key={index} className="bg-white py-5 px-3 w-full space-y-3 flex flex-col items-center md:items-start justify-center">
+                                <Image src={feature.img} alt={feature.title} width={500} height={500} className="mx-auto h-full w-full p-5 bg-white shadow-md rounded-md object-contain" />
+                                <h3 className="text-lg font-semibold mb-3  md:text-left text-center">{feature.title}</h3>
+                                <p className="text-gray-600 md:text-left text-center">{feature.description}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
             {/* Features */}
-            <WhyBlueSands />
+            <WhyBlueSands page="features" />
             <Footer />
         </main>
     );
