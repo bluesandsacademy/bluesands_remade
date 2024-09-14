@@ -38,15 +38,7 @@ export default function Navbar() {
                         ) : (
                             <button className="text-gray-800 hover:text-blue-500 transition-all duration-800 flex items-center gap-x-1 relative" onClick={() => setIsOpen(!isOpen)}>
                                 {item.title} <RxCaretDown className="text-xl" />
-                                {isOpen && (
-                                    <div className="absolute top-10 border border-gray-200 left-0 w-full h-fit shadow-md rounded-md bg-white flex flex-col items-start p-2 z-50">
-                                        {item.dropdown.map((dropdown, index) => (
-                                            <Link key={index} href={dropdown.href} className="text-gray-800 hover:text-blue-500 transition-all duration-800 hover:bg-blue-500 hover:bg-opacity-20 rounded-md p-2 w-full">
-                                                {dropdown.title}
-                                            </Link>
-                                        ))}
-                                    </div>
-                                )}
+                                
                             </button>
                         )}
                     </li>
@@ -75,15 +67,7 @@ export default function Navbar() {
                                     ) : (
                                         <button className="text-gray-800 hover:text-blue-500 transition-all duration-800 flex items-center gap-x-1 relative" onClick={() => setIsOpen(!isOpen)}>
                                             {item.title} <RxCaretDown className="text-xl" />
-                                            {isOpen && (
-                                                <div className="absolute top-10 left-0 w-full h-fit shadow-md rounded-md bg-white flex flex-col items-start p-2">
-                                                    {item.dropdown.map((dropdown, index) => (
-                                                        <Link key={index} href={dropdown.href} className="text-gray-800 hover:text-blue-500 transition-all duration-800 hover:bg-blue-500 hover:bg-opacity-20 rounded-md p-2 w-full">
-                                                            {dropdown.title}
-                                                        </Link>
-                                                    ))}
-                                                </div>
-                                            )}
+                                            
                                         </button>
                                     )}
                                 </li>
