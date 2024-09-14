@@ -84,7 +84,7 @@ export default function Contact() {
                         </div>
                         <div className="flex flex-col items-center justify-center gap-y-5 h-fit w-full border p-2 rounded-md border-gray-300">
                             <div className="flex items-center justify-center gap-x-5">
-                                <Link href="#">
+                                <Link href="https://www.tiktok.com/@bluesandstemlabs">
                                     <Image
                                         src="/icons/social/facebook.png"
                                         alt="facebook"
@@ -93,7 +93,7 @@ export default function Contact() {
                                         className="mx-auto"
                                     />
                                 </Link>
-                                <Link href="#">
+                                <Link href="https://x.com/bsa_stemlabs">
                                     <Image
                                         src="/icons/social/twitter.png"
                                         alt="twitter"
@@ -102,7 +102,7 @@ export default function Contact() {
                                         className="mx-auto"
                                     />
                                 </Link>
-                                <Link href="#">
+                                <Link href="https://instagram.com/bluesandstemlabs">
                                     <Image
                                         src="/icons/social/instagram.png"
                                         alt="instagram"
