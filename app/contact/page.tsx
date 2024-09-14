@@ -1,16 +1,55 @@
 "use client"
 
+import { useState } from "react"
 import Image from "next/image"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import Link from "next/link"
 import { toast } from "react-toastify"
+import axios from 'axios'
+import { baseUrl } from "@/utils/data/sample"
+import { Puff } from "react-loader-spinner"
 
 export default function Contact() {
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        emailAddress: "",
+        phoneNumber: "",
+        subject: "",
+        message: ""
+    })
+    const [loading, setLoading] = useState(false)
+
+    function clearField() {
+        setFormData({
+            firstName: "",
+            lastName: "",
+            emailAddress: "",
+            phoneNumber: "",
+            subject: "",
+            message: ""
+        })
+    }
 
     function handleSubmit(e: any) {
         e.preventDefault();
-        toast.info("The contact form is currently under maintenance. Please try again later.");
+        setLoading(true)
+        try {
+            axios.post(`${baseUrl}/contact`, formData)
+
+            toast.success("Thank you for your message. We'll get back to you shortly.")
+        } catch (error: any) {
+            console.error(error)
+            if (error && error.response) {
+                toast.error(error.response.data.message)
+            } else {
+                toast.error("An error occurred. Please try again later.")
+            }
+        } finally {
+            setLoading(false)
+            clearField()
+        }
     }
 
     return (
@@ -22,34 +61,34 @@ export default function Contact() {
                         <div className="flex flex-col md:flex-row items-center justify-between w-full gap-x-10 gap-y-5">
                             <div className="w-full space-y-2">
                                 <label htmlFor="firstName" className="text-gray-600 font-bold">First Name</label>
-                                <input type="text" placeholder="Enter First Name" id="firstName" className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required />
+                                <input type="text" placeholder="Enter First Name" id="firstName" value={formData.firstName} onChange={(e) => setFormData({ ...formData, firstName: e.target.value })} className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required />
                             </div>
                             <div className="w-full space-y-2">
                                 <label htmlFor="lastName" className="text-gray-600 font-bold">Last Name</label>
-                                <input type="text" placeholder="Enter Last Name" id="lastName" className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required />
+                                <input type="text" placeholder="Enter Last Name" id="lastName" value={formData.lastName} onChange={(e) => setFormData({ ...formData, lastName: e.target.value })} className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required />
                             </div>
                         </div>
                         <div className="flex flex-col md:flex-row items-center justify-between w-full gap-x-10 gap-y-5">
                             <div className="w-full space-y-2">
                                 <label htmlFor="emailAddress" className="text-gray-600 font-bold">Email Address</label>
-                                <input type="email" placeholder="Enter Email Address" id="emailAddress" className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required />
+                                <input type="email" placeholder="Enter Email Address" id="emailAddress" value={formData.emailAddress} onChange={(e) => setFormData({ ...formData, emailAddress: e.target.value })} className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required />
                             </div>
                             <div className="w-full space-y-2">
                                 <label htmlFor="phoneNumber" className="text-gray-600 font-bold">Phone Number</label>
-                                <input type="text" placeholder="Enter Phone Number" id="phoneNumber" className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required />
+                                <input type="text" placeholder="Enter Phone Number" id="phoneNumber" value={formData.phoneNumber} onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })} className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required />
                             </div>
                         </div>
                         <div className="flex flex-col items-start justify-start w-full gap-y-5">
                             <div className="w-full space-y-2">
                                 <label htmlFor="subject" className="text-gray-600 font-bold">Subject</label>
-                                <input type="text" placeholder="Enter Your Subject" id="subject" className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required />
+                                <input type="text" placeholder="Enter Your Subject" id="subject" value={formData.subject} onChange={(e) => setFormData({ ...formData, subject: e.target.value })} className="w-full h-12 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required />
                             </div>
                             <div className="w-full space-y-2">
                                 <label htmlFor="message" className="text-gray-600 font-bold">Message</label>
-                                <textarea name="message" id="message" placeholder="Enter Your Message" className="w-full h-32 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required></textarea>
+                                <textarea name="message" id="message" placeholder="Enter Your Message" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} className="w-full h-32 rounded-md border bg-gray-100 border-gray-300 px-3 py-2" required></textarea>
                             </div>
                         </div>
-                        <button className="w-full h-12 rounded-md bg-blue-500 text-white font-bold" type="submit">Send Message</button>
+                        <button className="w-full h-12 rounded-md bg-blue-500 text-white font-bold inline-flex items-center justify-center" type="submit">{loading ? <Puff color="white" width={40} height={40} /> : "Send Message"}</button>
                     </div>
                     <div className="md:w-3/12 w-full h-full flex flex-col gap-y-3 items-center justify-between p-2">
                         <div className="flex flex-col items-center justify-center gap-y-5 h-fit w-full border p-2 rounded-md border-gray-300">
