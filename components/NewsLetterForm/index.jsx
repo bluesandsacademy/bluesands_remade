@@ -27,8 +27,8 @@ export default function NewsLetterForm() {
   }
 
   return (
-    <div className="w-full h-full bg-[#F5F8FE] bg-repeat-x bg-center py-16 relative">
-      <div className="w-full h-full container flex flex-col gap-y-2 items-center text-center justify-center p-3">
+    <div className="w-full h-full bg-[#F5F8FE] bg-repeat-x bg-center py-16 relative mx-auto">
+      <div className="w-full h-full container flex flex-col gap-y-2 items-center mx-auto text-center justify-center p-3">
         <Image
           src="/icons/icon.png"
           alt="Little VR User"
