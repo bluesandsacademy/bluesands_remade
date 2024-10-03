@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
-import Link from 'next/link'
+import Link from "next/link";
 import FAQ from "@/components/FAQ";
 
 const content = [
@@ -35,7 +35,10 @@ const pricingData = [
     userType: "Individual",
     description:
       "Outstanding value, because we believe in enhancing science ed everywhere!",
-    price: "₦0",
+    price: {
+      Naira: "₦0",
+      Dollar: "$0"
+    },
     features: [
       "14 Days Free Trial",
       "Full Access to 10 Simulations",
@@ -52,8 +55,11 @@ const pricingData = [
     title: "Termly Plan",
     userType: ["Individual", "School"],
     description:
-      "Amazing  for fast 3D virtual labs with all the essential features.",
-    price: ["₦20,000", "₦15,000"],
+      "Amazing for fast 3D virtual labs with all the essential features.",
+    price: {
+      Naira: ["₦20,000", "₦15,000"],
+      Dollar: ["$20", "$15"]
+    },
     features: [
       "4 Months plan",
       "Full Access to 10 Simulations",
@@ -68,8 +74,12 @@ const pricingData = [
   },
 ];
 
+const currencyOptions = ["Naira", "Dollar"];
+
+
 export default function PricingPage() {
   const [selectedPlan, setSelectedPlan] = useState(pricingData[1].userType[0]);
+  const [currency, setCurrency] = useState("Naira");
 
   return (
     <main className="w-full h-full">
@@ -119,6 +129,23 @@ export default function PricingPage() {
       </div>
       <div className="w-full h-full bg-[#F5F8FE] py-10 md:px-20 px-2">
         <div className="flex md:flex-col flex-row items-center h-full">
+          <h3 className="text-3xl font-bold">Our Pricing</h3>
+          <p>Explore flexible pricing that fits your program budget.</p>
+          <div className="flex items-center gap-x-2">
+            {currencyOptions.map((option, index) => (
+              <button
+                key={index}
+                className={`px-3 py-1 rounded-md text-lg ${
+                  currency === option
+                    ? "bg-blue-500 text-white"
+                    : "border-blue-500 border text-blue-500"
+                }`}
+                onClick={() => setCurrency(option)}
+              >
+                {option}
+              </button>
+            ))}
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-x-60 gap-y-8">
             {pricingData.map((item, index) => (
               <div
@@ -153,9 +180,11 @@ export default function PricingPage() {
                   ) : null}
                   <p className="text-center text-sm">{item.description}</p>
                   <p className="text-center text-7xl my-2 font-bold">
-                    {Array.isArray(item.price)
-                      ? item.price[item.userType.indexOf(selectedPlan)]
-                      : item.price}
+                    {Array.isArray(item.price[currency])
+                      ? item.price[currency][
+                          item.userType.indexOf(selectedPlan)
+                        ]
+                      : item.price[currency]}
                   </p>
                 </div>
                 <div className="bg-white rounded-md w-full flex items-center flex-col justify-center h-fit shadow-sm gap-y-3">
@@ -175,7 +204,10 @@ export default function PricingPage() {
                       </li>
                     ))}
                   </ul>
-                  <Link href="/signup" className="bg-blue-500 text-white rounded-b-md px-2 py-3 w-full text-center">
+                  <Link
+                    href="/signup"
+                    className="bg-blue-500 text-white rounded-b-md px-2 py-3 w-full text-center"
+                  >
                     Get Started
                   </Link>
                 </div>
