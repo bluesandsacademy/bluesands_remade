@@ -13,7 +13,7 @@ const teamData = [
     fullName: "Sandra Akhigbe",
     role: "Co-Founder/Product Lead",
     image: "/team/sandra.png",
-    bio: "Alero Thompson, the ​Founder/CEO, conquered gender ​bias in education with help from her ​aunt. She mentors women and girls ​in technology after obtaining a ​software engineering certification.",
+    bio: "Product Designer at Blue Sands Academy ​with 5+ years of experience in girl child ​education. Passionate about empowering ​girls in STEM through user-friendly ​educational solutions to make learning ​tools engaging and effective.",
     linkedIn: "#",
   },
   {
