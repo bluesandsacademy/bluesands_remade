@@ -128,10 +128,10 @@ export default function PricingPage() {
         </div>
       </div>
       <div className="w-full h-full bg-[#F5F8FE] py-10 md:px-20 px-2">
-        <div className="flex md:flex-col flex-row items-center h-full">
+        <div className="flex flex-col md:flex-row items-center h-full space-y-4 md:space-y-0">
           <h3 className="text-3xl font-bold">Our Pricing</h3>
-          <p>Explore flexible pricing that fits your program budget.</p>
-          <div className="flex items-center gap-x-2">
+          <p className="text-center md:text-left">Explore flexible pricing that fits your program budget.</p>
+          <div className="flex items-center gap-x-2 flex-wrap justify-center">
             {currencyOptions.map((option, index) => (
               <button
                 key={index}
@@ -146,7 +146,7 @@ export default function PricingPage() {
               </button>
             ))}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-x-60 gap-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-x-4 gap-y-8">
             {pricingData.map((item, index) => (
               <div
                 key={index}
