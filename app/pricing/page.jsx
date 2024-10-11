@@ -128,7 +128,7 @@ export default function PricingPage() {
         </div>
       </div>
       <div className="w-full h-full bg-[#F5F8FE] py-10 md:px-20 px-2">
-        <div className="flex flex-col md:flex-row items-center h-full space-y-4 md:space-y-0">
+        <div className="flex flex-col items-center h-full space-y-4 md:space-y-0 gap-y-3">
           <h3 className="text-3xl font-bold">Our Pricing</h3>
           <p className="text-center md:text-left">Explore flexible pricing that fits your program budget.</p>
           <div className="flex items-center gap-x-2 flex-wrap justify-center">
