@@ -56,7 +56,7 @@ export default function Pricing() {
 
   return (
     <div className="w-full h-full bg-white space-y-5 py-10 md:px-16 px-2">
-      <div className="container mx-auto flex flex-col items-start justify-center h-full">
+      <div className="container mx-auto flex flex-col items-center justify-center h-full">
         <h3 className="text-3xl font-bold">Our Pricing</h3>
         <p>Explore flexible pricing that fits your program budget.</p>
         <div className="flex items-center gap-x-2">
