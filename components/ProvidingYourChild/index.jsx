@@ -6,7 +6,7 @@ export default function ProvidingYourChild() {
       <div className="container mx-auto flex flex-col-reverse md:flex-row justify-center gap-5">
         <div className="md:w-6/12 w-full space-y-5 p-2 flex items-center flex-col justify-center">
           <h3 className="md:text-5xl text-4xl font-semibold relative text-center md:text-left">
-            Give your child a head start with Blue Sands STEM Labs' VR Learning.
+            Give your child a head start with Blue Sands STEM Labs&apos; VR Learning.
           </h3>
           <p className="text-xl text-center md:text-left">
             Our immersive experiences improve knowledge retention by up to 75%
