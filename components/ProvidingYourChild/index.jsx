@@ -6,17 +6,12 @@ export default function ProvidingYourChild() {
       <div className="container mx-auto flex flex-col-reverse md:flex-row justify-center gap-5">
         <div className="md:w-6/12 w-full space-y-5 p-2 flex items-center flex-col justify-center">
           <h3 className="md:text-5xl text-4xl font-semibold relative text-center md:text-left">
-            Give your child the edge for success with Blue Sands STEM Labs&apos;
-            Immersive VR Learning.
+            Give your child a head start with Blue Sands STEM Labs' VR Learning.
           </h3>
           <p className="text-xl text-center md:text-left">
-            Providing the educational edge your child needs, Blue Sands STEM
-            Labs enhances teaching with immersive VR experiences that boost
-            knowledge retention by up to 75%. Research shows that students
-            retain up to 90% of what they experience compared to just 10% of
-            what they read, our solution enhances engagement, interaction, and
-            exam performance by up to 20%, all while aligning with curriculum
-            standards.
+            Our immersive experiences improve knowledge retention by up to 75%
+            and boost engagement and exam performance by 20%, all while
+            following curriculum standards.
           </p>
         </div>
         <div className="md:w-6/12 w-full">

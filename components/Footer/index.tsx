@@ -52,6 +52,10 @@ export default function Footer() {
                             <h3 className="text-lg font-bold">EDO STATE</h3>
                             <p>No 7 Omokhale Street, Off Federal Government Girls College Road. UBTH Back Gate, Benin City.</p>
                         </div>
+                        <div className="flex flex-col gap-y-2">
+                            <h3 className="text-lg font-bold">LAGOS STATE</h3>
+                            <p>Greenland Estate, House 10 Ogombo Rd, Subuola Abu St, Lagos Island, Sangotedo 105102, Lagos.</p>
+                        </div>
                     </div>
                 </div>
             </div>
