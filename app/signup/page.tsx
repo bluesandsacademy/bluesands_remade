@@ -58,6 +58,10 @@ export default function Signup() {
     const [selectedAccountType, setSelectedAccountType] = useState(userTypes[0]);
     const [viewPassword, setViewPassword] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+
+    const { push } = useRouter();
+
 
 
     function clearForm() {
@@ -100,10 +104,11 @@ export default function Signup() {
         setLoading(true);
         e.preventDefault();
         try {
-            await axios.post(
+            const user = await axios.post(
                 `${baseUrl}/auth/signup`,
                 formData
             );
+            setShowModal(true);
             toast("Sign Up Successful");
         } catch (error: any) {
             console.error(error);
@@ -121,9 +126,28 @@ export default function Signup() {
         }
     }
 
+    const handleModalClose = () => {
+        setShowModal(false);
+        push("/auth/login");
+    };
+
     return (
         <div>
             <Navbar />
+            {showModal && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                    <div className="bg-white p-5 rounded-lg shadow-lg">
+                        <h2 className="text-lg font-semibold">Sign Up Successful</h2>
+                        <p>Please check your email for the verification link.</p>
+                        <button
+                            className="mt-4 bg-blue-500 text-white px-4 py-2 rounded"
+                            onClick={handleModalClose}
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            )}
             <div className="w-full h-full flex md:flex-row flex-col-reverse items-start justify-between gap-x-5 py-20 md:px-20 px-4 bg-[#F5F8FE]">
                 <form className="md:w-6/12 w-full h-full flex flex-col items-center justify-center bg-white shadow-sm rounded-lg py-5 gap-y-5 md:px-20 px-4" onSubmit={handleSubmit}>
                     <h1 className="text-5xl font-semibold">Sign Up</h1>
