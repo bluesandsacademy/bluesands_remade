@@ -140,7 +140,7 @@ export default function Signup() {
                         <h2 className="text-lg font-semibold text-center">Sign Up Successful</h2>
                         <p className="text-center">Please check your email for the verification link.</p>
                         <button
-                            className="mt-4 bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition duration-200"
+                            className="mt-4 bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition duration-200 mx-auto"
                             onClick={handleModalClose}
                         >
                             Close
