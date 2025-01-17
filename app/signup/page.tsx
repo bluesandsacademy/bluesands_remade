@@ -128,19 +128,19 @@ export default function Signup() {
 
     const handleModalClose = () => {
         setShowModal(false);
-        push("/auth/login");
+        push("/login");
     };
 
     return (
         <div>
             <Navbar />
             {showModal && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <div className="bg-white p-5 rounded-lg shadow-lg">
-                        <h2 className="text-lg font-semibold">Sign Up Successful</h2>
-                        <p>Please check your email for the verification link.</p>
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
+                    <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-300">
+                        <h2 className="text-lg font-semibold text-center">Sign Up Successful</h2>
+                        <p className="text-center">Please check your email for the verification link.</p>
                         <button
-                            className="mt-4 bg-blue-500 text-white px-4 py-2 rounded"
+                            className="mt-4 bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition duration-200"
                             onClick={handleModalClose}
                         >
                             Close
