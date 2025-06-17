@@ -10,15 +10,8 @@ const teamData = [
     linkedIn: "#",
   },
   {
-    fullName: "Sandra Akhigbe",
-    role: "Co-Founder/Product Lead",
-    image: "/team/sandra.png",
-    bio: "Product Designer at Blue Sands Academy ​with 5+ years of experience in girl child ​education. Passionate about empowering ​girls in STEM through user-friendly ​educational solutions to make learning ​tools engaging and effective.",
-    linkedIn: "#",
-  },
-  {
     fullName: "Kingsley Okechukwu",
-    role: "CTO",
+    role: "Co-Founder/CTO",
     image: "/team/kingsley.png",
     bio: "He leads the software development ​team, concentrating on creating, testing, ​and managing robust and scalable ​software solutions for virtual labs and ​AI-driven apps.",
     linkedIn: "#",
