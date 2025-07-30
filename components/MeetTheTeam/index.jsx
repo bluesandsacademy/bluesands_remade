@@ -12,7 +12,7 @@ const teamData = [
   {
     fullName: "Kingsley Okechukwu",
     role: "Co-Founder/CTO",
-    image: "/team/kingsley.png",
+    image: "/team/kingsley.jpeg",
     bio: "He leads the software development ​team, concentrating on creating, testing, ​and managing robust and scalable ​software solutions for virtual labs and ​AI-driven apps.",
     linkedIn: "#",
   },
@@ -49,7 +49,7 @@ export default function MeetTheTeam() {
               alt={member.fullName}
               width={300}
               height={300}
-              className="w-full h-full rounded-md border border-gray-200"
+              className="w-full h-80 rounded-md border border-gray-200 object-cover object-top"
             />
             <div className="flex flex-row items-center justify-between h-full w-full">
               <h3 className="text-xl font-bold">{member.fullName}</h3>
