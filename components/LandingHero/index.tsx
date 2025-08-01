@@ -24,7 +24,7 @@ export default function LandingHero() {
                     <p className="md:text-2xl text-lg ">Virtual Science Labs offering engaging STEM courses<br /> accessible on tablet or PC anywhere, anytime.</p>
                     <div className="flex items-center gap-x-3">
                         <Link href="/pricing" className="bg-blue-500 text-white px-6 py-3 rounded-md">Get Pricing</Link>
-                        <Link href="/features" className="text-blue-500 flex items-center gap-x-2 hover:gap-x-3 transition-all duration-300 font-bold">Watch Video <FaArrowRightLong /></Link>
+                        <Link href="https://youtu.be/6R8EFrK0Vk0?si=1BTzaPa9C6UrS5Ye" target="_blank" className="text-blue-500 flex items-center gap-x-2 hover:gap-x-3 transition-all duration-300 font-bold">Watch Video <FaArrowRightLong /></Link>
                     </div>
                 </div>
                 <div className="w-fit h-full flex items-center justify-start relative">
