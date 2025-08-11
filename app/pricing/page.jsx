@@ -57,8 +57,8 @@ const pricingData = [
     description:
       "Amazing for fast 3D virtual labs with all the essential features.",
     price: {
-      Naira: ["₦20,000", "₦15,000"],
-      Dollar: ["$20", "$15"]
+      Naira: ["₦5,000", "₦5,000"],
+      Dollar: ["$5", "$5"]
     },
     features: [
       "4 Months plan",

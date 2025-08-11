@@ -14,8 +14,8 @@ const ConfirmPaymentModal = ({ open, onClose, selectedPlan, paymentRef }: { open
     const initializePayment = usePaystackPayment({
         publicKey: process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY as string,
         amount: user.userRole === "Individual"
-            ? (selectedPlan.title === "Free Plan" ? 0 : 20000 * 100)
-            : (user.userRole === "School" ? 15000 * 100 : 20000 * 100),
+            ? (selectedPlan.title === "Free Plan" ? 0 : 5000 * 100)
+            : (user.userRole === "School" ? 5000 * 100 : 5000 * 100),
         email: user.emailAddress,
         reference: paymentReference,
     });
@@ -39,8 +39,8 @@ const ConfirmPaymentModal = ({ open, onClose, selectedPlan, paymentRef }: { open
             if (!paymentRef) {
                 await axios.post(`${baseUrl}/auth/make-payment`, {
                     amount: user.userRole === "Individual"
-                        ? (selectedPlan.title === "Free Plan" ? 0 : 20000 * 100)
-                        : (user.userRole === "School" ? 15000 * 100 : 20000 * 100),
+                        ? (selectedPlan.title === "Free Plan" ? 0 : 5000 * 100)
+                        : (user.userRole === "School" ? 5000 * 100 : 5000 * 100),
                     paymentReference: paymentReference,
                 });
             }
