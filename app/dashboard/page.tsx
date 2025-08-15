@@ -23,7 +23,7 @@ const pricingData = [
         userType: ["Individual", "School"],
         description:
             "Amazing  for fast 3D virtual labs with all the essential features.",
-        price: ["₦20,000", "₦15,000"],
+        price: ["₦5,000", "₦5,000"],
     },
 ];
 
@@ -71,8 +71,8 @@ const PaymentComponent = ({ next, prev }: { next: () => void, prev: () => void }
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {pricingData.map((plan, index) => {
                     const price = user.userRole === "Individual"
-                        ? (plan.title === "Free Plan" ? 0 : 20000)
-                        : (user.userRole === "School" ? 15000 : 20000);
+                        ? (plan.title === "Free Plan" ? 0 : 5000)
+                        : (user.userRole === "School" ? 5000 : 5000);
 
                     console.log(`Price for ${user.userRole} is ${price}`)
 
