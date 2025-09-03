@@ -57,7 +57,7 @@ export default function VirtualStemLab() {
                                 The virtual lab provides interactive simulations to explore core biological concepts, including cellular structures, metabolic pathways, and gene expression, covering topics from basic chemistry to advanced biotechnology and genomics.
                             </p>
                         </div>
-                        <Link href="/signup" className="bg-blue-500 text-white px-5 py-3 rounded-md">Enroll Now</Link>
+                        <Link href="http://app.bluesandstemlabs.com/auth/register" className="bg-blue-500 text-white px-5 py-3 rounded-md">Enroll Now</Link>
                     </div>
                     <div className="w-full h-full flex items-center justify-center gap-3">
                         <div className="w-fit h-full ml-auto flex items-center justify-center bg-[#F5F8FE] p-3 rounded-md relative">
@@ -101,7 +101,7 @@ export default function VirtualStemLab() {
                                 The virtual lab offers interactive simulations to explore key chemistry concepts like atomic structure, bonding, stoichiometry, gas laws, and calorimetry, helping students build foundational skills and practical knowledge.
                             </p>
                         </div>
-                        <Link href="/signup" className="bg-blue-500 text-white px-5 py-3 rounded-md">Enroll Now</Link>
+                        <Link href="http://app.bluesandstemlabs.com/auth/register" className="bg-blue-500 text-white px-5 py-3 rounded-md">Enroll Now</Link>
                     </div>
                 </div>
             </div>
@@ -116,7 +116,7 @@ export default function VirtualStemLab() {
                                 It uses interactive simulations to teach core physics concepts, including forces, energy, motion, waves, gravitational fields, and satellite orbits, helping students apply theory to practical scenarios.
                             </p>
                         </div>
-                        <Link href="/signup" className="bg-blue-500 text-white px-5 py-3 rounded-md">Enroll Now</Link>
+                        <Link href="http://app.bluesandstemlabs.com/auth/register" className="bg-blue-500 text-white px-5 py-3 rounded-md">Enroll Now</Link>
                     </div>
                     <div className="w-full h-full flex items-center justify-center gap-3">
                         <div className="w-fit h-full ml-auto flex items-center justify-center bg-[#F5F8FE] p-3 rounded-md relative">

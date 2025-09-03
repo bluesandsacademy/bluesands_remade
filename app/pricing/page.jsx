@@ -205,7 +205,7 @@ export default function PricingPage() {
                     ))}
                   </ul>
                   <Link
-                    href="/signup"
+                    href="http://app.bluesandstemlabs.com/auth/register"
                     className="bg-blue-500 text-white rounded-b-md px-2 py-3 w-full text-center"
                   >
                     Get Started

@@ -130,7 +130,7 @@ export default function Pricing() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/signup" className="bg-blue-500 text-white text-center rounded-b-md px-2 py-3 w-full">
+                <Link href="http://app.bluesandstemlabs.com/auth/register" className="bg-blue-500 text-white text-center rounded-b-md px-2 py-3 w-full">
                   Get Started
                 </Link>
               </div>
