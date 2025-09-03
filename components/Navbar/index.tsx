@@ -50,7 +50,7 @@ export default function Navbar() {
                 ) : (
 
                     <div className="flex items-center gap-x-3">
-                        <Link href="http://app.bluesandstemlabs.com/auth/register/individual" target="_blank" className="bg-blue-500 text-white px-6 py-3 rounded-md">Sign Up</Link>
+                        <Link href="http://app.bluesandstemlabs.com/auth/register" target="_blank" className="bg-blue-500 text-white px-6 py-3 rounded-md">Sign Up</Link>
                         <Link href="http://app.bluesandstemlabs.com/auth/login" target="_blank" className="border border-gray-300 px-6 py-3 rounded-md">Login</Link>
                     </div>
                 )}

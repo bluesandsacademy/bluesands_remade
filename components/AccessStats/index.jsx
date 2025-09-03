@@ -75,7 +75,7 @@ export default function AccessStats() {
                 <p className="text-sm">{lab.description}</p>
               </div>
               <div className="flex items-center gap-2 justify-between w-full">
-                <Link href="/signup" className="bg-blue-500 text-white px-4 py-2 rounded-md">
+                <Link href="http://app.bluesandstemlabs.com/auth/register" className="bg-blue-500 text-white px-4 py-2 rounded-md">
                   Enroll Now
                 </Link>
                 <button className="flex items-center gap-2 border border-gray-400 px-4 py-2 rounded-md">

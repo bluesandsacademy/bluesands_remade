@@ -17,8 +17,8 @@ export default function Features() {
                     {/* <h1 className="text-gray-600 text-lg font-semibold">Why BlueSands STEM Labs?</h1> */}
                     <p className="md:text-5xl text-lg font-bold">Unleash the Power of Innovation with Our Cutting-Edge Features</p>
                     <div className="mt-10 flex items-center gap-x-3">
-                        <Link href="/signup" className="bg-blue-500 text-white px-6 py-3 rounded-md">Sign Up</Link>
-                        <Link href="/features" className="text-blue-500 flex items-center gap-x-2 hover:gap-x-3 transition-all duration-300 font-bold">Watch Video <FaArrowRightLong /></Link>
+                        <Link href="http://app.bluesandstemlabs.com/auth/register" className="bg-blue-500 text-white px-6 py-3 rounded-md">Sign Up</Link>
+                        <Link href="https://youtu.be/6R8EFrK0Vk0?si=1BTzaPa9C6UrS5Ye" className="text-blue-500 flex items-center gap-x-2 hover:gap-x-3 transition-all duration-300 font-bold">Watch Video <FaArrowRightLong /></Link>
                     </div>
                 </div>
                 <div className="md:w-6/12 w-full h-full">
