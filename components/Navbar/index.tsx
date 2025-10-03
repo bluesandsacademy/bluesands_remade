@@ -26,7 +26,7 @@ export default function Navbar() {
                 {isAuthenticated ? (
                     <Link href="/dashboard" className="bg-blue-500 text-white px-6 py-3 rounded-md">Dashboard</Link>
                 ) : (
-                    <Link href="/signup" className="bg-blue-500 text-white px-6 py-3 rounded-md">Sign Up</Link>
+                    <Link href="https://www.bluesandstemlabs.com/signup" className="bg-blue-500 text-white px-6 py-3 rounded-md">Sign Up</Link>
                 )}
                 <GiHamburgerMenu className="text-3xl" onClick={() => setIsMobile(!isMobile)} />
             </div>
